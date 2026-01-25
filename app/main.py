@@ -26,19 +26,42 @@ from reportlab.lib.units import mm
 # Load environment variables from .env
 load_dotenv()
 
+# --- Stripe environment / mode switch ---
+STRIPE_MODE = os.getenv("STRIPE_MODE", "test").strip().lower()
+
+# Test (default) values
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
 STRIPE_PRICE_ID = os.getenv("STRIPE_PRICE_ID", "")
 STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "")
+
+# Live values (used when STRIPE_MODE=live)
+STRIPE_LIVE_SECRET_KEY = os.getenv("STRIPE_LIVE_SECRET_KEY", "")
+STRIPE_LIVE_PRICE_ID = os.getenv("STRIPE_LIVE_PRICE_ID", "")
+STRIPE_WEBHOOK_SECRET_LIVE = os.getenv("STRIPE_WEBHOOK_SECRET_LIVE", "")
+
 SITE_URL = os.getenv("SITE_URL", "http://127.0.0.1:8000")
 
-stripe.api_key = STRIPE_SECRET_KEY
+
+def _active_stripe_secret_key() -> str:
+    return STRIPE_LIVE_SECRET_KEY if STRIPE_MODE == "live" else STRIPE_SECRET_KEY
+
+
+def _active_price_id() -> str:
+    return STRIPE_LIVE_PRICE_ID if STRIPE_MODE == "live" else STRIPE_PRICE_ID
+
+
+def _active_webhook_secret() -> str:
+    return STRIPE_WEBHOOK_SECRET_LIVE if STRIPE_MODE == "live" else STRIPE_WEBHOOK_SECRET
+
+
+stripe.api_key = _active_stripe_secret_key()
 
 # --- App / product identity (used in templates + artefacts) ---
 APP_NAME = "PromptKitPro"
 APP_VERSION = "2.0"
 
 PRODUCT_NAME = "Operations & Productivity Prompt Library"
-PRODUCT_PRICE_GBP = "£30"
+PRODUCT_PRICE_GBP = "£25"
 PRODUCT_PROMPT_COUNT = 250
 
 app = FastAPI(title=APP_NAME)
@@ -71,9 +94,9 @@ def db() -> sqlite3.Connection:
 
 def make_token(session_id: str) -> str:
     """
-    Generate a download token. For MVP, we use an HMAC based on the Stripe secret key.
+    Generate a download token. For MVP, we use an HMAC based on the active Stripe secret key.
     """
-    secret = (STRIPE_SECRET_KEY or "dev-secret").encode("utf-8")
+    secret = (_active_stripe_secret_key() or "dev-secret").encode("utf-8")
     msg = f"{session_id}:{int(time.time())}".encode("utf-8")
     return hmac.new(secret, msg, "sha256").hexdigest()
 
@@ -422,12 +445,21 @@ def home(request: Request):
 
 @app.post("/buy")
 def buy(email: str = Form(...)):
-    if not STRIPE_SECRET_KEY or not STRIPE_PRICE_ID:
-        raise HTTPException(status_code=500, detail="Missing STRIPE_SECRET_KEY or STRIPE_PRICE_ID in .env")
+    active_key = _active_stripe_secret_key()
+    active_price = _active_price_id()
+
+    if not active_key or not active_price:
+        raise HTTPException(
+            status_code=500,
+            detail="Missing Stripe configuration for current STRIPE_MODE (secret key / price id).",
+        )
+
+    # Ensure Stripe SDK uses the correct key (helps if env vars change between deploys)
+    stripe.api_key = active_key
 
     session = stripe.checkout.Session.create(
         mode="payment",
-        line_items=[{"price": STRIPE_PRICE_ID, "quantity": 1}],
+        line_items=[{"price": active_price, "quantity": 1}],
         customer_email=email,
         success_url=f"{SITE_URL}/success?session_id={{CHECKOUT_SESSION_ID}}",
         cancel_url=f"{SITE_URL}/",
@@ -453,8 +485,12 @@ async def stripe_webhook(request: Request):
     payload = await request.body()
     sig_header = request.headers.get("stripe-signature", "")
 
+    active_webhook_secret = _active_webhook_secret()
+    if not active_webhook_secret:
+        raise HTTPException(status_code=500, detail="Webhook secret not configured for current STRIPE_MODE.")
+
     try:
-        event = stripe.Webhook.construct_event(payload, sig_header, STRIPE_WEBHOOK_SECRET)
+        event = stripe.Webhook.construct_event(payload, sig_header, active_webhook_secret)
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Webhook error: {e}")
 
