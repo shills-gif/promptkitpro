@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — PromptKitPro</title>
+  <link rel="stylesheet" href="/static/site.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>PromptKitPro</div>
+      </div>
+      <div class="badge">
+        <span class="code">v{{ version or "2.0" }}</span>
+        <span>privacy</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Privacy Policy</h2>
+      <p class="small" style="margin-top:-4px;">
+        Last updated: <span class="code">2026-01-25</span>
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>Overview (plain English)</h2>
+      <p>
+        We collect the minimum information required to process payments and deliver your purchase.
+        We do not sell your data, run advertising trackers, or build marketing profiles.
+        Payments are handled by <strong>Stripe</strong>.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>What data we collect</h2>
+      <ul class="list">
+        <li><strong>Email address</strong> — used only to deliver your download link and respond to support requests.</li>
+        <li><strong>Purchase metadata</strong> — such as payment status and a transaction/session identifier (via Stripe).</li>
+        <li><strong>Technical logs (minimal)</strong> — basic server logs needed for security and debugging (e.g., request timestamps and error traces).</li>
+      </ul>
+
+      <p class="small" style="margin-top:-6px;">
+        We do <strong>not</strong> collect browsing history, advertising identifiers, or behavioural analytics.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>How payments work</h2>
+      <p>
+        Payments are processed by Stripe Checkout. Card details never touch our servers.
+        Stripe acts as the source of truth for payment status and sends us a signed confirmation (webhook)
+        so we can fulfil your order.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>How we use your data</h2>
+      <ul class="list">
+        <li>To create and confirm your order</li>
+        <li>To deliver a secure, tokenised download link</li>
+        <li>To provide customer support if you contact us</li>
+        <li>To prevent fraud and abuse, and to keep the service reliable</li>
+      </ul>
+
+      <div class="hr"></div>
+
+      <h2>Data retention</h2>
+      <p>
+        We retain order records only as long as necessary for fulfilment, basic accounting, and legal obligations.
+        Support emails are retained only as long as needed to resolve your request.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>Cookies &amp; analytics</h2>
+      <p>
+        This site does not use third-party advertising trackers. Stripe may set cookies that are necessary
+        for secure payment processing on Stripe-hosted checkout pages.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>Your rights</h2>
+      <p>
+        You may request access to or deletion of your personal data (where applicable) by contacting us.
+        We’ll respond as quickly as practical.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>Contact</h2>
+      <p class="small" style="margin-bottom:0;">
+        Email: <a href="mailto:support@promptkitpro.com">support@promptkitpro.com</a><br />
+        Operator: PromptKitPro (independent)<br />
+        Location: United Kingdom
+      </p>
+
+      <div class="footer" style="margin-top:18px;">
+        <div><a href="/">Return to overview</a></div>
+        <div><span class="code">v{{ version or "2.0" }}</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,302 @@
+:root{
+  /* Core palette */
+  --bg: #0b0f19;
+  --panel: rgba(255,255,255,0.06);
+  --panel-2: rgba(255,255,255,0.09);
+  --border: rgba(255,255,255,0.16);
+  --border-strong: rgba(255,255,255,0.22);
+
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+  --faint: rgba(255,255,255,0.55);
+
+  /* Brand accents (kept) */
+  --accent: #7c3aed;   /* purple */
+  --accent-2: #22c55e; /* green */
+  --danger: #ef4444;
+
+  /* UI */
+  --shadow: 0 14px 40px rgba(0,0,0,0.38);
+  --shadow-soft: 0 10px 26px rgba(0,0,0,0.28);
+  --radius: 16px;
+  --radius-sm: 12px;
+
+  --max: 980px;
+  --pad: 22px;
+
+  /* Typography */
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+*{ box-sizing: border-box; }
+html, body { height: 100%; }
+
+/* Continuous background lives on html (prevents “screen tiling” feel) */
+html{
+  min-height: 100%;
+  background:
+    radial-gradient(900px 500px at 18% -12%, rgba(124,58,237,0.30), transparent 62%),
+    radial-gradient(820px 520px at 92% -6%, rgba(34,197,94,0.16), transparent 58%),
+    radial-gradient(1000px 680px at 50% 112%, rgba(59,130,246,0.12), transparent 62%),
+    var(--bg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body{
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font);
+  color: var(--text);
+  background: transparent;
+}
+
+a{
+  color: rgba(255,255,255,0.92);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,255,255,0.28);
+}
+a:hover{ text-decoration-color: rgba(255,255,255,0.62); }
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 34px 18px 56px;
+}
+
+/* Top nav */
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.logo{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(124,58,237,1), rgba(34,197,94,0.92));
+  box-shadow: 0 10px 22px rgba(124,58,237,0.18);
+}
+
+/* Badge */
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Layout grid */
+.grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+@media (max-width: 880px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+/* Sticky helper for purchase card */
+.sticky{
+  position: sticky;
+  top: 18px;
+  align-self: start;
+}
+
+/* Hero */
+.hero h1{
+  font-size: 50px;
+  line-height: 1.04;
+  margin: 10px 0 10px;
+  letter-spacing: -0.8px;
+  font-weight: 750;
+}
+@media (max-width: 540px){
+  .hero h1{ font-size: 38px; letter-spacing: -0.5px; }
+}
+
+.hero p{
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 62ch;
+}
+.hero strong{ color: rgba(255,255,255,0.96); }
+
+/* KPIs */
+.kpis{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.kpi{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Card */
+.card{
+  position: relative;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.085), rgba(255,255,255,0.05));
+  border-radius: var(--radius);
+  padding: var(--pad);
+  box-shadow: var(--shadow);
+}
+
+/* Subtle “product UI” highlight line at top */
+.card:before{
+  content:"";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.14);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.card h2{
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+}
+.card p{
+  margin: 0 0 12px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Lists */
+.list{
+  margin: 12px 0 18px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.list li{ margin: 8px 0; }
+.list strong{ color: rgba(255,255,255,0.92); }
+
+/* Divider */
+.hr{
+  height: 1px;
+  background: var(--border);
+  margin: 16px 0;
+}
+
+/* Form labels and inputs */
+label{
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.input{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.22);
+  color: var(--text);
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.input::placeholder{ color: rgba(255,255,255,0.42); }
+.input:focus{
+  border-color: rgba(124,58,237,0.65);
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.16);
+  background: rgba(0,0,0,0.28);
+}
+
+/* Actions row */
+.actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn{
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.12s ease, border-color 0.12s ease, filter 0.12s ease;
+}
+.btn:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.28);
+}
+.btn:active{ transform: translateY(1px); }
+
+/* Primary button: slightly more premium, less neon */
+.btn-primary{
+  background: linear-gradient(135deg, rgba(124,58,237,1), rgba(34,197,94,0.78));
+  border-color: rgba(255,255,255,0.22);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover{ filter: brightness(1.04); }
+
+/* Small text */
+.small{
+  font-size: 13px;
+  color: var(--faint);
+  line-height: 1.55;
+}
+
+/* Code pill */
+.code{
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.84);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+  font-size: 12px;
+}
+
+/* Footer */
+.footer{
+  margin-top: 22px;
+  color: var(--faint);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}

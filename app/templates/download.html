@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download</title>
+  <link rel="stylesheet" href="/static/site.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>PromptKitPro</div>
+      </div>
+      <div class="badge">
+        <span class="code">v{{ version or "2.0" }}</span>
+        <span>secure delivery</span>
+      </div>
+    </div>
+
+    <div class="card">
+      {% if token %}
+        <h2>Your library is ready ✅</h2>
+        <p>
+          Download your ZIP below. This link is <strong>tokenised</strong> and intended for you only.
+        </p>
+
+        <div class="actions" style="margin-top:14px;">
+          <a class="btn btn-primary" href="/file?token={{ token }}">Download prompt_library.zip</a>
+          <a class="btn" href="/">Return to overview</a>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>What’s inside</h2>
+        <ul class="list" style="margin-bottom:14px;">
+          <li><strong>prompt_library.pdf</strong> — formatted, browsable reference</li>
+          <li><strong>prompt_library.csv</strong> — editable source library (tag, filter, customise)</li>
+          <li><strong>prompt_library.json</strong> — machine-readable format for tooling</li>
+          <li><strong>prompt_library.md</strong> — clean, human-readable Markdown</li>
+          <li><strong>README.txt</strong> — quick usage notes</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>Quick start (60 seconds)</h2>
+        <ul class="list" style="margin-bottom:14px;">
+          <li>Open the <strong>PDF</strong> to browse categories and pick a prompt</li>
+          <li>Use the <strong>CSV</strong> to maintain your own versions</li>
+          <li>Use the <strong>JSON</strong> if you want to build prompts into a workflow</li>
+        </ul>
+
+        <p class="small" style="margin:0;">
+          <strong>Security note:</strong> This download link is single-purpose. Don’t share it.<br />
+          Need help? <a href="mailto:support@promptkitpro.com">support@promptkitpro.com</a>
+          · <a href="/static/refunds.html">Refunds</a> · <a href="/static/privacy.html">Privacy</a>
+        </p>
+
+      {% else %}
+        <h2>Finalising your delivery…</h2>
+        <p>
+          Your payment is confirmed. We’re just waiting for Stripe’s secure confirmation to complete delivery.
+          This usually takes a few seconds.
+        </p>
+
+        <div class="actions" style="margin-top:14px;">
+          <button class="btn btn-primary" onclick="location.reload()">Refresh</button>
+          <a class="btn" href="/">Return to overview</a>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>If this takes longer than expected</h2>
+        <p class="small" style="margin:0;">
+          In most cases, one refresh is enough. If you’re still seeing this after ~30 seconds, it usually means
+          webhook delivery is delayed (or, in development, Stripe CLI forwarding isn’t running).<br />
+          If you need help: <a href="mailto:support@promptkitpro.com">support@promptkitpro.com</a>
+        </p>
+      {% endif %}
+
+      <div class="footer" style="margin-top:18px;">
+        <div>PromptKitPro</div>
+        <div><span class="code">v{{ version or "2.0" }}</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

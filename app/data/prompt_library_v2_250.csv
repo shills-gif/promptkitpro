@@ -1,0 +1,4753 @@
+id,category,prompt
+1,Meetings,"Title: Agenda that drives decisions
+Role: Senior Operations Manager / Facilitator
+Task: Create a decision-focused agenda for a meeting that must conclude with clear decisions and owners.
+Inputs (paste and fill):
+- Meeting purpose (1 sentence): [ ]
+- Attendees + roles: [ ]
+- Decisions needed: [ ]
+- Pre-reads / data links: [ ]
+- Timebox (mins): [ ]
+- Constraints (e.g., remote/in-person): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include timeboxes per section
+- Include 'decision criteria' for each decision item
+Output (Markdown):
+- Agenda table (time, topic, owner, desired outcome)
+- Decision items section (decision, options, criteria)
+- Pre-work checklist for attendees
+- Parking lot section
+Finish with a short QA checklist tailored to this output."
+2,Meetings,"Title: Minutes + decision log from rough notes
+Role: Ops Manager / Scribe
+Task: Turn messy notes into clean minutes and a decision log that can be shared immediately.
+Inputs (paste and fill):
+- Raw notes (paste): [ ]
+- Date/time/location: [ ]
+- Attendees: [ ]
+- Any action items already known: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Do not invent facts; mark unknowns as [TBD]
+Output (Markdown):
+- Minutes (summary, discussion highlights)
+- Decisions log (decision, rationale, owner, due date)
+- Actions table (action, owner, due date, dependency)
+Finish with a short QA checklist tailored to this output."
+3,Meetings,"Title: Exec-ready meeting brief (one-pager)
+Role: Chief of Staff style
+Task: Create a one-page pre-read briefing for an exec meeting, optimised for speed of understanding.
+Inputs (paste and fill):
+- Topic: [ ]
+- Background context (paste): [ ]
+- Key metrics/data (paste): [ ]
+- Options on the table: [ ]
+- Recommendation (if any): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Maximum 1 page in Markdown
+- Use 'So what?' framing
+Output (Markdown):
+- Headline + decision required
+- Context (3–5 bullets)
+- Options (pros/cons)
+- Recommendation
+- Risks & mitigations
+- Appendix: key numbers
+Finish with a short QA checklist tailored to this output."
+4,Meetings,"Title: Meeting invite message that gets attendance
+Role: Team Lead
+Task: Write a concise invite message that makes it obvious why the meeting matters and what preparation is required.
+Inputs (paste and fill):
+- Audience: [ ]
+- Meeting objective: [ ]
+- Date/time: [ ]
+- Expected prep (if any): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep under 180 words
+Output (Markdown):
+- Subject line options (3)
+- Invite message
+- Prep checklist
+- If you can't attend: async alternatives
+Finish with a short QA checklist tailored to this output."
+5,Meetings,"Title: Workshop plan (90–120 mins)
+Role: Facilitator
+Task: Design a structured workshop to solve a specific operational problem and leave with an agreed plan.
+Inputs (paste and fill):
+- Problem statement: [ ]
+- Participants: [ ]
+- Current constraints: [ ]
+- Success definition: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include activities and timing
+- Include materials needed
+Output (Markdown):
+- Workshop agenda with activities
+- Facilitation script cues
+- Outputs to capture (artefacts)
+- Follow-up plan (48h + 7d)
+Finish with a short QA checklist tailored to this output."
+6,Meetings,"Title: Difficult conversation meeting plan
+Role: People Manager
+Task: Prepare a plan for a difficult 1:1 meeting (performance, behaviour, or expectations) that is fair and clear.
+Inputs (paste and fill):
+- Situation summary (facts only): [ ]
+- Desired change: [ ]
+- Employee perspective (if known): [ ]
+- Policies/constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Use respectful tone
+- Include boundary statements
+Output (Markdown):
+- Opening script
+- Facts vs impact
+- Questions to ask
+- Agreements & next steps
+- Documentation notes
+Finish with a short QA checklist tailored to this output."
+7,Meetings,"Title: Decision memo after meeting
+Role: Ops Manager
+Task: Write a post-meeting decision memo that documents what was decided and why, to prevent re-litigating later.
+Inputs (paste and fill):
+- Decision(s) made: [ ]
+- Rationale: [ ]
+- Alternatives considered: [ ]
+- Owners/dates: [ ]
+- Stakeholders to inform: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Decision memo
+- Actions + owners + dates
+- Comms list + message snippets
+Finish with a short QA checklist tailored to this output."
+8,Meetings,"Title: Stand-up format redesign
+Role: Agile team lead
+Task: Redesign a daily stand-up so it is fast, useful, and not a status theatre.
+Inputs (paste and fill):
+- Team type: [ ]
+- Current stand-up issues: [ ]
+- Time available: [ ]
+- Work tracking tool: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include a 2-week experiment plan
+Output (Markdown):
+- New stand-up script (timeboxed)
+- Rules of engagement
+- Escalation/parking lot method
+- Experiment metrics + review cadence
+Finish with a short QA checklist tailored to this output."
+9,Meetings,"Title: Retrospective facilitation pack
+Role: Facilitator
+Task: Create a retrospective plan that surfaces real issues and produces actionable improvements.
+Inputs (paste and fill):
+- Sprint/period: [ ]
+- What happened (high-level): [ ]
+- Team sentiment: [ ]
+- Constraints (remote etc.): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include psychological safety measures
+Output (Markdown):
+- Retro agenda
+- Prompt questions
+- Activity instructions
+- Action selection method
+- Close-out script
+Finish with a short QA checklist tailored to this output."
+10,Meetings,"Title: Stakeholder meeting Q&A prep
+Role: Ops lead
+Task: Prepare a Q&A pack anticipating tough stakeholder questions and best answers.
+Inputs (paste and fill):
+- Stakeholder group: [ ]
+- Topic: [ ]
+- Known concerns: [ ]
+- Data/metrics: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include 'answer if asked' vs 'avoid unless asked'
+Output (Markdown):
+- Top 15 questions
+- Best answer + supporting evidence
+- Red flags + safe phrasing
+- Follow-up actions if challenged
+Finish with a short QA checklist tailored to this output."
+11,Meetings,"Title: Meeting to unblock a project
+Role: Project lead
+Task: Plan and run a meeting designed to remove blockers and re-align owners.
+Inputs (paste and fill):
+- Project summary: [ ]
+- Current blockers: [ ]
+- Decision needed: [ ]
+- Attendees: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Agenda focused on blockers
+- Blocker table (issue, owner, decision, due date)
+- Escalation path
+- Post-meeting message
+Finish with a short QA checklist tailored to this output."
+12,Meetings,"Title: 1:1 template for ongoing coaching
+Role: Line manager
+Task: Create a repeatable 1:1 structure that supports coaching, alignment, and accountability.
+Inputs (paste and fill):
+- Role/level: [ ]
+- Current goals: [ ]
+- Known issues: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include a section for wellbeing
+Output (Markdown):
+- 1:1 agenda template
+- Question bank
+- Follow-up notes structure
+Finish with a short QA checklist tailored to this output."
+13,Meetings,"Title: Cross-team alignment meeting design
+Role: Programme manager
+Task: Design a cross-team alignment meeting that clarifies interfaces, dependencies, and handoffs.
+Inputs (paste and fill):
+- Teams involved: [ ]
+- Shared goal: [ ]
+- Dependencies: [ ]
+- Known friction points: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include RACI and interface definition
+Output (Markdown):
+- Agenda
+- Interface map section
+- RACI table
+- Dependency log
+- Operating cadence proposal
+Finish with a short QA checklist tailored to this output."
+14,Meetings,"Title: Meeting cancellation / reschedule message
+Role: Team lead
+Task: Write a message that cancels or reschedules without losing momentum.
+Inputs (paste and fill):
+- Meeting name: [ ]
+- Reason (optional): [ ]
+- New proposal: [ ]
+- What to do instead: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep concise
+Output (Markdown):
+- Message
+- Async alternative
+- Next steps + dates
+Finish with a short QA checklist tailored to this output."
+15,Meetings,"Title: Facilitator opening + closing scripts
+Role: Facilitator
+Task: Write opening and closing scripts that set expectations, keep pace, and end with clarity.
+Inputs (paste and fill):
+- Meeting type: [ ]
+- Outcome needed: [ ]
+- Sensitive topics (if any): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Opening script
+- Timekeeping cues
+- Decision capture phrasing
+- Closing script + recap
+Finish with a short QA checklist tailored to this output."
+16,Meetings,"Title: Conflict mediation meeting plan
+Role: Mediator
+Task: Create a mediation meeting plan for two parties in conflict, with structure and safety.
+Inputs (paste and fill):
+- Parties + roles: [ ]
+- Conflict summary (facts): [ ]
+- Shared objective: [ ]
+- Non-negotiables: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include ground rules and escalation
+Output (Markdown):
+- Ground rules
+- Agenda
+- Questions for each party
+- Agreement framework
+- Documenting outcomes
+Finish with a short QA checklist tailored to this output."
+17,Meetings,"Title: Executive update in 5 minutes
+Role: Ops manager
+Task: Prepare a 5-minute spoken update and a supporting slide outline (text only).
+Inputs (paste and fill):
+- Topic: [ ]
+- Status: [ ]
+- Metrics: [ ]
+- Risks: [ ]
+- Ask: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Make it 'headline-first'
+Output (Markdown):
+- Spoken script (5 mins)
+- Slide outline (max 5 slides)
+- Likely questions + answers
+Finish with a short QA checklist tailored to this output."
+18,Meetings,"Title: Action tracker system
+Role: Ops lead
+Task: Design a lightweight action tracker process for meeting actions so they don't disappear.
+Inputs (paste and fill):
+- Tooling available (Sheets/Jira/Notion): [ ]
+- Team size: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Action tracker template
+- Operating rules
+- Reminder cadence
+- Definition of done
+Finish with a short QA checklist tailored to this output."
+19,Meetings,"Title: Pre-mortem meeting plan
+Role: Facilitator
+Task: Plan a pre-mortem meeting to identify how a project could fail and prevent it.
+Inputs (paste and fill):
+- Project: [ ]
+- Timeline: [ ]
+- Constraints: [ ]
+- Stakeholders: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Agenda
+- Prompt questions
+- Risk capture format
+- Output: top mitigations + owners
+Finish with a short QA checklist tailored to this output."
+20,Meetings,"Title: Decision matrix creation
+Role: Ops analyst
+Task: Create a decision matrix for competing options, with weights and scoring guidance.
+Inputs (paste and fill):
+- Decision to make: [ ]
+- Options: [ ]
+- Criteria: [ ]
+- Weights preferences: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Explain how to score fairly
+Output (Markdown):
+- Decision matrix table
+- Scoring instructions
+- Recommendation logic
+- Sensitivity check steps
+Finish with a short QA checklist tailored to this output."
+21,Meetings,"Title: Meeting follow-up email that drives action
+Role: Team lead
+Task: Write a follow-up email that summarises outcomes and makes next actions unavoidable.
+Inputs (paste and fill):
+- Audience: [ ]
+- Key outcomes: [ ]
+- Actions + owners: [ ]
+- Deadlines: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Use an actions table
+Output (Markdown):
+- Email
+- Actions table
+- Decision recap
+- Next checkpoint
+Finish with a short QA checklist tailored to this output."
+22,Meetings,"Title: Async meeting alternative
+Role: Ops manager
+Task: Convert a proposed meeting into an async workflow (doc + comments) to save time.
+Inputs (paste and fill):
+- Topic: [ ]
+- Decisions needed: [ ]
+- Stakeholders: [ ]
+- Deadline: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Async plan (steps + timeline)
+- Doc template outline
+- Commenting rules
+- Escalation to live call criteria
+Finish with a short QA checklist tailored to this output."
+23,Meetings,"Title: Meeting effectiveness audit
+Role: Ops excellence
+Task: Audit a team's recurring meeting and propose improvements with measurable success criteria.
+Inputs (paste and fill):
+- Meeting name + cadence: [ ]
+- Current agenda (paste): [ ]
+- Pain points: [ ]
+- Attendee feedback (if any): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Audit findings
+- Top changes (quick wins + structural)
+- New agenda
+- Success metrics + review date
+Finish with a short QA checklist tailored to this output."
+24,Meetings,"Title: Crisis call runbook (first 60 minutes)
+Role: Incident lead
+Task: Create a runbook for the first 60 minutes of a crisis call: roles, comms, decisions, cadence.
+Inputs (paste and fill):
+- Scenario type: [ ]
+- Systems/areas affected: [ ]
+- Stakeholders: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Assume high pressure; keep ultra clear
+Output (Markdown):
+- Roles (incident lead, scribe, comms etc.)
+- Minute-by-minute plan
+- Comms templates (internal/external)
+- Decision checklist
+Finish with a short QA checklist tailored to this output."
+25,Meetings,"Title: Vendor negotiation meeting plan
+Role: Procurement/ops lead
+Task: Plan a negotiation meeting with a vendor to improve terms without damaging the relationship.
+Inputs (paste and fill):
+- Vendor + product/service: [ ]
+- Current terms (price, SLA, contract length): [ ]
+- Your target outcome: [ ]
+- Your walk-away point: [ ]
+- Leverage points: [ ]
+- Decision-makers present: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include BATNA and concessions plan
+Output (Markdown):
+- Negotiation prep (BATNA, targets, concessions)
+- Agenda + roles
+- Question list to uncover flexibility
+- Proposed terms sheet (draft)
+- Follow-up email template
+Finish with a short QA checklist tailored to this output."
+26,SOPs,"Title: SOP from messy notes
+Role: Operations Manager
+Task: Convert messy notes into a clear, step-by-step SOP that a new starter can follow.
+Inputs (paste and fill):
+- Process name: [ ]
+- Audience/role: [ ]
+- Raw notes / current steps (paste): [ ]
+- Tools/systems used: [ ]
+- Edge cases / exceptions (if known): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Use numbered steps
+- Include 'Purpose' and 'Scope'
+Output (Markdown):
+- Purpose
+- Scope
+- Definitions (if needed)
+- Prerequisites
+- Procedure (numbered)
+- Exceptions & troubleshooting
+- Ownership + review cadence
+Finish with a short QA checklist tailored to this output."
+27,SOPs,"Title: SOP template library for a team
+Role: Ops Excellence
+Task: Create a reusable SOP template library and naming convention for a small team.
+Inputs (paste and fill):
+- Team function: [ ]
+- Top recurring processes: [ ]
+- Where SOPs will live (SharePoint/Notion/etc.): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- SOP template (full)
+- Lightweight checklist template
+- Naming convention + folder structure
+- Review/approval workflow
+Finish with a short QA checklist tailored to this output."
+28,SOPs,"Title: Customer refund SOP
+Role: Customer Operations Lead
+Task: Write a refund SOP that balances customer fairness, fraud prevention, and speed.
+Inputs (paste and fill):
+- Refund policy constraints: [ ]
+- Refund triggers: [ ]
+- Approval levels: [ ]
+- Systems used: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include fraud checks and escalation
+Output (Markdown):
+- Policy summary
+- Decision tree
+- Step-by-step procedure
+- Comms templates
+- Audit trail requirements
+Finish with a short QA checklist tailored to this output."
+29,SOPs,"Title: Onboarding SOP for new team member
+Role: Team Lead
+Task: Create an onboarding SOP for a new hire’s first 2 weeks, including access, training, and expectations.
+Inputs (paste and fill):
+- Role: [ ]
+- Start date: [ ]
+- Key tools/accounts: [ ]
+- Key people: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Day 1 checklist
+- Week 1 plan
+- Week 2 plan
+- Access checklist
+- Training checklist
+- Success criteria + check-ins
+Finish with a short QA checklist tailored to this output."
+30,SOPs,"Title: Offboarding SOP (leaver)
+Role: Ops/HR Coordinator
+Task: Create an offboarding SOP to ensure security, knowledge transfer, and compliance.
+Inputs (paste and fill):
+- Role type: [ ]
+- Notice period: [ ]
+- Systems list: [ ]
+- Asset list: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include access revocation timing
+Output (Markdown):
+- Offboarding timeline
+- Access removal checklist
+- Knowledge handover checklist
+- Comms plan
+- Final payroll/admin checks
+Finish with a short QA checklist tailored to this output."
+31,SOPs,"Title: Incident response SOP (non-technical)
+Role: Incident Manager
+Task: Write an incident response SOP for operational incidents (e.g., service disruption) with clear roles.
+Inputs (paste and fill):
+- Incident types: [ ]
+- On-call/roles available: [ ]
+- Comms channels: [ ]
+- Escalation contacts: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Roles & responsibilities
+- Severity levels
+- First 15 minutes checklist
+- Comms cadence
+- Post-incident review steps
+Finish with a short QA checklist tailored to this output."
+32,SOPs,"Title: SOP for handling customer complaints
+Role: Customer Experience Lead
+Task: Create an SOP for receiving, triaging, and resolving complaints with consistent tone.
+Inputs (paste and fill):
+- Channels (email/phone/social): [ ]
+- Typical complaint themes: [ ]
+- Compensation rules: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include empathy guidelines
+Output (Markdown):
+- Triage categories + SLAs
+- Step-by-step handling
+- Response templates
+- Escalation matrix
+- Quality checks
+Finish with a short QA checklist tailored to this output."
+33,SOPs,"Title: Procurement SOP (small purchases)
+Role: Ops Manager
+Task: Create a procurement SOP for small purchases to prevent chaos while staying fast.
+Inputs (paste and fill):
+- Spending thresholds: [ ]
+- Budget owners: [ ]
+- Approved vendors: [ ]
+- Tooling (cards, PO system): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Workflow by threshold
+- Approvals table
+- Documentation required
+- Vendor onboarding steps
+- Audit checks
+Finish with a short QA checklist tailored to this output."
+34,SOPs,"Title: Travel & expenses SOP
+Role: Finance Ops
+Task: Write a travel & expenses SOP that reduces back-and-forth and speeds reimbursements.
+Inputs (paste and fill):
+- Expense categories: [ ]
+- Receipt rules: [ ]
+- Submission tool: [ ]
+- Approval chain: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Policy summary
+- Submission steps
+- Do/don’t examples
+- Approval SLA
+- Common issues + fixes
+Finish with a short QA checklist tailored to this output."
+35,SOPs,"Title: Data access request SOP
+Role: Data Governance Lead
+Task: Create an SOP for requesting data access with least-privilege and auditability.
+Inputs (paste and fill):
+- Systems/data sets: [ ]
+- Roles involved (requester/approver): [ ]
+- Compliance constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include approval questions
+Output (Markdown):
+- Request form fields
+- Approval workflow
+- Provisioning steps
+- Logging/audit
+- Periodic access review procedure
+Finish with a short QA checklist tailored to this output."
+36,SOPs,"Title: Quality assurance SOP for deliverables
+Role: Ops Excellence
+Task: Create an SOP for QA of recurring deliverables (reports, emails, packs) to reduce errors.
+Inputs (paste and fill):
+- Deliverable types: [ ]
+- Common errors: [ ]
+- Quality bar: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- QA checklist template
+- Sampling plan
+- Escalation rules
+- Definition of 'ready to send'
+- Training notes
+Finish with a short QA checklist tailored to this output."
+37,SOPs,"Title: SOP for scheduling and calendar hygiene
+Role: Team Lead
+Task: Create an SOP for scheduling meetings and maintaining calendar hygiene across a team.
+Inputs (paste and fill):
+- Team size/time zones: [ ]
+- Core hours: [ ]
+- Meeting types: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Rules (core hours, buffers)
+- Booking workflow
+- Recurring meeting review cadence
+- No-meeting blocks policy
+- Exceptions
+Finish with a short QA checklist tailored to this output."
+38,SOPs,"Title: SOP for document version control
+Role: Ops Manager
+Task: Write an SOP for file naming and version control in a shared drive to stop confusion.
+Inputs (paste and fill):
+- Where documents live: [ ]
+- Doc types: [ ]
+- Who edits: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Naming rules
+- Versioning rules
+- Approval/publish workflow
+- Archiving rules
+- Examples
+Finish with a short QA checklist tailored to this output."
+39,SOPs,"Title: SOP for vendor management (lightweight)
+Role: Ops Manager
+Task: Create a vendor management SOP including review cadence, SLA checks, and renewal decisions.
+Inputs (paste and fill):
+- Vendors list: [ ]
+- Contract terms: [ ]
+- KPIs/SLAs: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Vendor register fields
+- Monthly/quarterly review steps
+- Renewal decision checklist
+- Issue escalation process
+- Comms templates
+Finish with a short QA checklist tailored to this output."
+40,SOPs,"Title: SOP for meeting minutes and action tracking
+Role: Ops Lead
+Task: Write an SOP to standardise minutes, decisions, and action tracking across a team.
+Inputs (paste and fill):
+- Where minutes are stored: [ ]
+- Action tracker tool: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Minutes template
+- Decision log template
+- Action tracker rules
+- Owner responsibilities
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+41,SOPs,"Title: SOP for handling inbound requests (triage)
+Role: Ops Team Lead
+Task: Create an SOP for triaging inbound requests to the team to protect focus and meet SLAs.
+Inputs (paste and fill):
+- Channels: [ ]
+- Request types: [ ]
+- Service levels: [ ]
+- Team capacity constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Triage categories
+- Intake form
+- Prioritisation rules
+- Escalation rules
+- Comms templates
+Finish with a short QA checklist tailored to this output."
+42,SOPs,"Title: SOP for publishing updates to customers
+Role: Customer Comms Lead
+Task: Create an SOP for publishing customer-facing updates (release notes, status updates) with approvals.
+Inputs (paste and fill):
+- Update types: [ ]
+- Approval roles: [ ]
+- Channels: [ ]
+- Tone guidance: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include legal/compliance sign-off if needed
+Output (Markdown):
+- Workflow
+- Templates
+- Approval checklist
+- Timing rules
+- Post-publish monitoring
+Finish with a short QA checklist tailored to this output."
+43,SOPs,"Title: SOP for internal comms announcements
+Role: Internal Comms
+Task: Write an SOP for internal announcements so messages are consistent and findable.
+Inputs (paste and fill):
+- Announcement types: [ ]
+- Channels (Slack/email): [ ]
+- Approval roles: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Decision tree (which channel when)
+- Template
+- Approval workflow
+- Posting schedule
+- Archive rules
+Finish with a short QA checklist tailored to this output."
+44,SOPs,"Title: SOP for equipment issuance & returns
+Role: Office/IT Ops
+Task: Create an SOP for issuing equipment to staff and recovering it on return.
+Inputs (paste and fill):
+- Equipment types: [ ]
+- Tracking tool: [ ]
+- Locations: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Issue workflow
+- Return workflow
+- Asset register fields
+- Security wipes steps
+- Exception handling
+Finish with a short QA checklist tailored to this output."
+45,SOPs,"Title: SOP for supplier invoice processing
+Role: Finance Ops
+Task: Write an SOP for processing supplier invoices quickly with controls against duplicates/fraud.
+Inputs (paste and fill):
+- Invoice channels: [ ]
+- Approval chain: [ ]
+- Payment terms: [ ]
+- Accounting system: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include 3-way match if relevant
+Output (Markdown):
+- Workflow
+- Checks list
+- Approval table
+- Exception handling
+- KPIs to track
+Finish with a short QA checklist tailored to this output."
+46,SOPs,"Title: SOP for customer onboarding
+Role: Customer Success
+Task: Create an SOP for onboarding a new customer from contract signed to first value.
+Inputs (paste and fill):
+- Customer type: [ ]
+- Implementation steps: [ ]
+- Key milestones: [ ]
+- Roles involved: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Timeline
+- Kickoff checklist
+- Milestones + acceptance criteria
+- Risks & mitigations
+- Handover to BAU
+Finish with a short QA checklist tailored to this output."
+47,SOPs,"Title: SOP for backlog grooming
+Role: Ops / Product Ops
+Task: Write an SOP for backlog grooming so priorities stay aligned and work stays actionable.
+Inputs (paste and fill):
+- Backlog tool: [ ]
+- Cadence: [ ]
+- Participants: [ ]
+- Definition of ready: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Grooming agenda
+- Rules (size, priority, acceptance criteria)
+- Definition of ready checklist
+- Outcomes and follow-up
+Finish with a short QA checklist tailored to this output."
+48,SOPs,"Title: SOP for password/secret handling (non-technical)
+Role: Security-aware Ops
+Task: Create an SOP for handling passwords and secrets safely in a small team.
+Inputs (paste and fill):
+- Tools allowed (password manager): [ ]
+- Sensitive systems: [ ]
+- Access roles: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Do not recommend insecure practices
+Output (Markdown):
+- Approved tools
+- Rules (sharing, storage)
+- Access request workflow
+- Incident steps if compromised
+Finish with a short QA checklist tailored to this output."
+49,SOPs,"Title: SOP for recurring monthly close tasks
+Role: Ops + Finance
+Task: Create an SOP for monthly close tasks with a calendar, owners, and dependencies.
+Inputs (paste and fill):
+- Tasks list (paste): [ ]
+- Owners: [ ]
+- Deadlines: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Calendar schedule
+- Task checklist by day
+- Dependencies map
+- Escalation rules
+- Post-close review
+Finish with a short QA checklist tailored to this output."
+50,SOPs,"Title: SOP audit and improvement plan
+Role: Ops Excellence
+Task: Audit an existing SOP for clarity, completeness, and safety, then propose revisions.
+Inputs (paste and fill):
+- Existing SOP (paste): [ ]
+- Known issues: [ ]
+- Audience: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Highlight ambiguous steps
+Output (Markdown):
+- Audit findings
+- Rewritten SOP (improved)
+- Change log
+- Training notes
+Finish with a short QA checklist tailored to this output."
+51,Process,"Title: Process map from description
+Role: Process Analyst
+Task: Create a clear process map (text-based) from a written description, including roles and handoffs.
+Inputs (paste and fill):
+- Process description (paste): [ ]
+- Start event: [ ]
+- End event: [ ]
+- Roles involved: [ ]
+- Tools/systems: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Represent as numbered steps plus a swimlane-style table
+Output (Markdown):
+- Process steps
+- Swimlane table (step, role, input, tool, output)
+- Pain points & risks
+- Quick improvement ideas
+Finish with a short QA checklist tailored to this output."
+52,Process,"Title: Root cause analysis (5 Whys + fishbone)
+Role: Ops Excellence
+Task: Run a root cause analysis on a recurring problem and propose fixes that address the root, not symptoms.
+Inputs (paste and fill):
+- Problem statement: [ ]
+- Frequency/impact: [ ]
+- Evidence/examples: [ ]
+- What has been tried: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- 5 Whys chain
+- Fishbone categories + hypotheses
+- Most likely root causes
+- Fix options (quick/medium/long)
+- How to validate
+Finish with a short QA checklist tailored to this output."
+53,Process,"Title: Cycle time reduction plan
+Role: Lean Ops
+Task: Create a plan to reduce cycle time for a process, including measurement and experiments.
+Inputs (paste and fill):
+- Process name: [ ]
+- Current cycle time + data: [ ]
+- Constraints: [ ]
+- Where delays happen (if known): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include baseline metrics
+Output (Markdown):
+- Baseline + bottlenecks
+- Hypotheses
+- Experiment backlog
+- Measurement plan
+- Expected impact table
+Finish with a short QA checklist tailored to this output."
+54,Process,"Title: Handoff definition for two teams
+Role: Programme Manager
+Task: Define a clean handoff between two teams to reduce rework and confusion.
+Inputs (paste and fill):
+- Team A responsibilities: [ ]
+- Team B responsibilities: [ ]
+- Current issues: [ ]
+- Artifacts exchanged: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Handoff contract (inputs/outputs)
+- Definition of done on both sides
+- Escalation path
+- Examples (good vs bad handoff)
+Finish with a short QA checklist tailored to this output."
+55,Process,"Title: Standard work instructions (one-page)
+Role: Ops Trainer
+Task: Create one-page standard work instructions for a repeating task.
+Inputs (paste and fill):
+- Task: [ ]
+- Audience: [ ]
+- Tools: [ ]
+- Common mistakes: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep to one page
+Output (Markdown):
+- Purpose
+- When to use
+- Steps (with checkpoints)
+- Do/Don't
+- Troubleshooting
+Finish with a short QA checklist tailored to this output."
+56,Process,"Title: Process KPI design
+Role: Ops Analyst
+Task: Design meaningful KPIs for a process, avoiding vanity metrics.
+Inputs (paste and fill):
+- Process goal: [ ]
+- Stakeholders: [ ]
+- Available data sources: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Candidate KPI list
+- Definitions (formula, data source, owner)
+- Leading vs lagging mapping
+- Targets + rationale
+- Risks of gaming + mitigations
+Finish with a short QA checklist tailored to this output."
+57,Process,"Title: Automation opportunity scan
+Role: Ops + Automation
+Task: Identify automation opportunities in a process and produce an implementation shortlist.
+Inputs (paste and fill):
+- Process steps (paste): [ ]
+- Tools used: [ ]
+- Volume/frequency: [ ]
+- Error rate: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Consider controls and exceptions
+Output (Markdown):
+- Automation candidates (ranked)
+- Expected savings/benefit
+- Risk/complexity
+- Recommended next 3 steps
+Finish with a short QA checklist tailored to this output."
+58,Process,"Title: Process documentation pack
+Role: Ops Excellence
+Task: Produce a documentation pack for a process suitable for audit and onboarding.
+Inputs (paste and fill):
+- Process name: [ ]
+- Regulatory/compliance needs: [ ]
+- Current docs (paste): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Process overview
+- RACI
+- SOP link/summary
+- Controls & evidence
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+59,Process,"Title: Service blueprint (customer-facing process)
+Role: Service Designer
+Task: Create a service blueprint linking customer journey steps to backstage operations.
+Inputs (paste and fill):
+- Service: [ ]
+- Customer journey steps (paste): [ ]
+- Backstage teams: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Customer steps
+- Frontstage touchpoints
+- Backstage actions
+- Systems
+- Failure points + mitigations
+Finish with a short QA checklist tailored to this output."
+60,Process,"Title: Define 'Definition of Ready/Done'
+Role: Product/Ops
+Task: Create clear Definitions of Ready and Done to reduce churn and rework.
+Inputs (paste and fill):
+- Work type (tickets/projects): [ ]
+- Common rework causes: [ ]
+- Tooling: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Definition of Ready checklist
+- Definition of Done checklist
+- Examples
+- Adoption plan
+Finish with a short QA checklist tailored to this output."
+61,Process,"Title: Process change proposal
+Role: Change Manager
+Task: Write a proposal for a process change including rationale, impacts, and rollout plan.
+Inputs (paste and fill):
+- Current process summary: [ ]
+- Proposed change: [ ]
+- Who is impacted: [ ]
+- Risks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Problem + evidence
+- Proposed change
+- Impact assessment
+- Rollout plan
+- Success metrics
+Finish with a short QA checklist tailored to this output."
+62,Process,"Title: Process control points & evidence
+Role: Compliance-aware Ops
+Task: Identify control points in a process and specify what evidence should be captured.
+Inputs (paste and fill):
+- Process steps (paste): [ ]
+- Compliance requirements: [ ]
+- Audit frequency: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Control points table
+- Evidence to capture
+- Owner
+- Failure modes
+- Monitoring cadence
+Finish with a short QA checklist tailored to this output."
+63,Process,"Title: Training plan for a process
+Role: Ops Trainer
+Task: Create a training plan to teach a process to new team members with assessment.
+Inputs (paste and fill):
+- Process: [ ]
+- Audience: [ ]
+- Common errors: [ ]
+- Tools: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Training modules
+- Practice exercises
+- Assessment checklist
+- Sign-off criteria
+- Refresher cadence
+Finish with a short QA checklist tailored to this output."
+64,Process,"Title: Process exception handling guide
+Role: Ops Lead
+Task: Design a clear exception handling guide: what counts as an exception, who decides, and how to record it.
+Inputs (paste and fill):
+- Process: [ ]
+- Common exceptions: [ ]
+- Risk tolerance: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Exception taxonomy
+- Decision rights
+- Workflow
+- Logging template
+- Examples
+Finish with a short QA checklist tailored to this output."
+65,Process,"Title: Process simplification (remove steps)
+Role: Lean Ops
+Task: Simplify a process by challenging each step and proposing a leaner flow.
+Inputs (paste and fill):
+- Current steps (paste): [ ]
+- Why it exists (if known): [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Step-by-step challenge (keep/modify/remove)
+- New simplified flow
+- Risks introduced + mitigations
+- Implementation plan
+Finish with a short QA checklist tailored to this output."
+66,Process,"Title: SLA and queue design
+Role: Ops Analyst
+Task: Design SLAs and a queueing approach for incoming work so urgent items get handled without chaos.
+Inputs (paste and fill):
+- Work types: [ ]
+- Volumes: [ ]
+- Capacity: [ ]
+- Business priorities: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- SLA tiers
+- Queue rules
+- Triage criteria
+- Reporting metrics
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+67,Process,"Title: Process maturity assessment
+Role: Ops Excellence
+Task: Assess a process against a maturity model and propose a roadmap to improve.
+Inputs (paste and fill):
+- Process: [ ]
+- Current pain points: [ ]
+- Current documentation/tools: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Maturity levels definition
+- Current assessment
+- Gaps
+- Roadmap (30/60/90 days)
+- Metrics
+Finish with a short QA checklist tailored to this output."
+68,Process,"Title: Change impact comms plan
+Role: Change Manager
+Task: Create a communications plan for a process change (who, what, when, channel).
+Inputs (paste and fill):
+- Change summary: [ ]
+- Stakeholder groups: [ ]
+- Timeline: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Comms matrix
+- Key messages by audience
+- FAQ
+- Feedback channels
+- Success measures
+Finish with a short QA checklist tailored to this output."
+69,Process,"Title: Process risk assessment
+Role: Risk-aware Ops
+Task: Identify operational risks in a process and propose controls.
+Inputs (paste and fill):
+- Process steps (paste): [ ]
+- Known incidents: [ ]
+- Risk appetite: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Risk table (risk, cause, impact, likelihood)
+- Controls
+- Owners
+- Residual risk
+- Monitoring
+Finish with a short QA checklist tailored to this output."
+70,Process,"Title: Work instruction visual checklist (text)
+Role: Ops
+Task: Create a visual-style checklist in text (boxes, sections) for a task to reduce errors.
+Inputs (paste and fill):
+- Task: [ ]
+- Critical steps: [ ]
+- Tools: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Checklist with sections
+- Go/No-go checkpoints
+- Sign-off line
+- Troubleshooting
+Finish with a short QA checklist tailored to this output."
+71,Process,"Title: Documented escalation path
+Role: Ops Lead
+Task: Define an escalation path for a process including triggers and decision-makers.
+Inputs (paste and fill):
+- Process: [ ]
+- What goes wrong: [ ]
+- Roles available: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Escalation levels
+- Triggers
+- Who to contact
+- Information to include
+- Post-escalation review
+Finish with a short QA checklist tailored to this output."
+72,Process,"Title: Process ownership model
+Role: Ops Excellence
+Task: Define ownership for a process: roles, responsibilities, and governance cadence.
+Inputs (paste and fill):
+- Process: [ ]
+- Teams involved: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- RACI
+- Owner responsibilities
+- Governance cadence
+- Change control process
+- Metrics dashboard outline
+Finish with a short QA checklist tailored to this output."
+73,Process,"Title: Process audit checklist
+Role: Internal Auditor
+Task: Create an audit checklist for a process to check compliance and effectiveness.
+Inputs (paste and fill):
+- Process: [ ]
+- Requirements/policies: [ ]
+- Evidence sources: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Audit checklist
+- Sampling guidance
+- Common findings
+- Reporting template
+Finish with a short QA checklist tailored to this output."
+74,Process,"Title: From KPI dip to action plan
+Role: Ops Analyst
+Task: Given a KPI has dipped, create a structured investigation and action plan.
+Inputs (paste and fill):
+- KPI definition: [ ]
+- Recent trend data (paste): [ ]
+- Suspected drivers: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Hypotheses list
+- Data to pull
+- Investigation steps
+- Action plan options
+- Communication plan
+Finish with a short QA checklist tailored to this output."
+75,Process,"Title: Process playbook for scaling volume
+Role: Ops Lead
+Task: Design a playbook to scale a process as volume doubles without doubling headcount.
+Inputs (paste and fill):
+- Process: [ ]
+- Current volume/capacity: [ ]
+- Bottlenecks: [ ]
+- Automation tools available: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Scaling levers (people/process/tools)
+- Prioritised initiatives
+- Risks
+- Timeline
+- Metrics
+Finish with a short QA checklist tailored to this output."
+76,Stakeholders,"Title: Stakeholder map + influence plan
+Role: Programme Manager
+Task: Create a stakeholder map and influence plan for an initiative.
+Inputs (paste and fill):
+- Initiative summary: [ ]
+- Stakeholders list (names/roles): [ ]
+- What you need from each: [ ]
+- Known concerns: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Stakeholder map table (influence, interest, stance)
+- Engagement strategy per stakeholder
+- Key messages
+- Cadence + channels
+Finish with a short QA checklist tailored to this output."
+77,Stakeholders,"Title: Executive stakeholder update email
+Role: Ops Lead
+Task: Write a crisp update email to exec stakeholders with clear asks and risks.
+Inputs (paste and fill):
+- Initiative: [ ]
+- This week's progress: [ ]
+- Key metrics: [ ]
+- Risks/blockers: [ ]
+- Asks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep under 220 words
+Output (Markdown):
+- Subject options (3)
+- Email body
+- Asks table
+- Appendix (optional: metrics)
+Finish with a short QA checklist tailored to this output."
+78,Stakeholders,"Title: Stakeholder interview guide
+Role: Research/Change Lead
+Task: Create an interview guide to understand stakeholder needs, fears, and success criteria.
+Inputs (paste and fill):
+- Topic: [ ]
+- Stakeholder types: [ ]
+- Time per interview: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Opening script
+- Question list (needs, constraints, success)
+- Probing follow-ups
+- Note-taking template
+- Synthesis plan
+Finish with a short QA checklist tailored to this output."
+79,Stakeholders,"Title: Comms plan for a change
+Role: Change Manager
+Task: Create a comms plan for a change that anticipates resistance and builds trust.
+Inputs (paste and fill):
+- Change summary: [ ]
+- Who is impacted: [ ]
+- Timeline: [ ]
+- Likely objections: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Comms matrix
+- Key messages (why/what/when/how)
+- FAQ
+- Feedback loop
+- Launch-day plan
+Finish with a short QA checklist tailored to this output."
+80,Stakeholders,"Title: Stakeholder alignment workshop
+Role: Facilitator
+Task: Design an alignment workshop that resolves conflicting priorities.
+Inputs (paste and fill):
+- Stakeholders: [ ]
+- Conflicts: [ ]
+- Decision required: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Workshop agenda
+- Pre-read
+- Decision method
+- Outputs
+- Follow-up comms
+Finish with a short QA checklist tailored to this output."
+81,Stakeholders,"Title: Briefing note for a sponsor
+Role: Chief of Staff
+Task: Write a sponsor briefing note that prepares them to advocate for the work.
+Inputs (paste and fill):
+- Sponsor: [ ]
+- What you need them to do: [ ]
+- Context: [ ]
+- Risks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- One-page brief
+- Talking points
+- Objections + responses
+- Next steps
+Finish with a short QA checklist tailored to this output."
+82,Stakeholders,"Title: Stakeholder risk register
+Role: Risk-aware PM
+Task: Create a stakeholder risk register (political/people risks) with mitigations.
+Inputs (paste and fill):
+- Initiative: [ ]
+- Stakeholder dynamics (paste): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Stakeholder risks table
+- Early warning signs
+- Mitigations
+- Owners
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+83,Stakeholders,"Title: Message house (comms positioning)
+Role: Comms Lead
+Task: Create a message house: core narrative, supporting points, proof, and tone.
+Inputs (paste and fill):
+- Audience: [ ]
+- Product/change: [ ]
+- Proof points/data: [ ]
+- Tone constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Core message
+- 3 supporting pillars
+- Proof points
+- Example soundbites
+- Do/don't language
+Finish with a short QA checklist tailored to this output."
+84,Stakeholders,"Title: Objection handling sheet
+Role: Account/Stakeholder Manager
+Task: Produce an objection handling sheet for common stakeholder pushback.
+Inputs (paste and fill):
+- Change/ask: [ ]
+- Likely objections: [ ]
+- Non-negotiables: [ ]
+- Concessions possible: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Objections table (objection, underlying need, response, evidence)
+- Escalation guidance
+- Concession plan
+Finish with a short QA checklist tailored to this output."
+85,Stakeholders,"Title: Stakeholder meeting pack
+Role: Programme Manager
+Task: Create a pack for a stakeholder meeting: objective, agenda, materials, and decisions.
+Inputs (paste and fill):
+- Meeting purpose: [ ]
+- Attendees: [ ]
+- Decisions needed: [ ]
+- Context links: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Meeting objective
+- Agenda
+- Pre-read summary
+- Decision items
+- Follow-up plan
+Finish with a short QA checklist tailored to this output."
+86,Stakeholders,"Title: Internal announcement (sensitive)
+Role: Internal Comms
+Task: Draft a sensitive internal announcement with empathy and clarity.
+Inputs (paste and fill):
+- Topic: [ ]
+- What is changing: [ ]
+- What stays the same: [ ]
+- Support available: [ ]
+- FAQs: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Avoid legal risk; flag areas needing HR/legal review
+Output (Markdown):
+- Announcement
+- FAQ
+- Support/resources section
+- Manager talking points
+Finish with a short QA checklist tailored to this output."
+87,Stakeholders,"Title: Stakeholder prioritisation and trade-offs
+Role: Ops Lead
+Task: Create a framework to manage stakeholder requests and trade-offs transparently.
+Inputs (paste and fill):
+- Common requests: [ ]
+- Capacity constraints: [ ]
+- Strategy/OKRs: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Prioritisation criteria
+- Intake form fields
+- Decision rules
+- Comms template for 'not now'
+Finish with a short QA checklist tailored to this output."
+88,Stakeholders,"Title: Stakeholder newsletter template
+Role: Comms Lead
+Task: Create a reusable stakeholder newsletter template with sections that drive action.
+Inputs (paste and fill):
+- Audience: [ ]
+- Cadence: [ ]
+- Key metrics: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Template
+- Section guidance
+- Metrics presentation rules
+- CTA guidance
+Finish with a short QA checklist tailored to this output."
+89,Stakeholders,"Title: Stakeholder escalation email
+Role: Programme Manager
+Task: Write an escalation email that stays calm, factual, and action-oriented.
+Inputs (paste and fill):
+- Issue: [ ]
+- Impact: [ ]
+- What has been tried: [ ]
+- Decision needed: [ ]
+- Deadline: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Email
+- Decision request
+- Options + recommendation
+- Next checkpoint
+Finish with a short QA checklist tailored to this output."
+90,Stakeholders,"Title: Partner coordination plan
+Role: Partnerships/Ops
+Task: Create a coordination plan with an external partner: cadence, interfaces, and SLAs.
+Inputs (paste and fill):
+- Partner: [ ]
+- Shared deliverables: [ ]
+- Interfaces: [ ]
+- SLA needs: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Operating cadence
+- Interface definition
+- Escalation path
+- Shared tracker template
+Finish with a short QA checklist tailored to this output."
+91,Stakeholders,"Title: Stakeholder sentiment tracking
+Role: Change Lead
+Task: Design a lightweight method to track stakeholder sentiment over time.
+Inputs (paste and fill):
+- Stakeholders: [ ]
+- Signals available (meetings, surveys): [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Signal list
+- Tracking template
+- Scoring rubric
+- Intervention playbook
+Finish with a short QA checklist tailored to this output."
+92,Stakeholders,"Title: Decision narrative for conflicting groups
+Role: Chief of Staff
+Task: Write a narrative that explains a decision to groups who wanted different outcomes.
+Inputs (paste and fill):
+- Decision: [ ]
+- Groups impacted: [ ]
+- What each group wanted: [ ]
+- Rationale: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Be fair; acknowledge trade-offs
+Output (Markdown):
+- Narrative
+- What we heard
+- Why this decision
+- What happens next
+- How feedback will be handled
+Finish with a short QA checklist tailored to this output."
+93,Stakeholders,"Title: Stakeholder workshop pre-read
+Role: Programme Manager
+Task: Create a pre-read that ensures stakeholders arrive informed and ready to decide.
+Inputs (paste and fill):
+- Topic: [ ]
+- Options: [ ]
+- Data: [ ]
+- Decision deadline: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Max 2 pages
+Output (Markdown):
+- Context
+- Options + pros/cons
+- Recommendation (if any)
+- Questions for stakeholders
+- Decision criteria
+Finish with a short QA checklist tailored to this output."
+94,Stakeholders,"Title: RACI negotiation with stakeholders
+Role: Ops Lead
+Task: Produce a RACI and a negotiation plan to secure agreement on responsibilities.
+Inputs (paste and fill):
+- Initiative: [ ]
+- Teams: [ ]
+- Contentious areas: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Draft RACI
+- Questions to resolve ambiguity
+- Negotiation plan
+- Final sign-off approach
+Finish with a short QA checklist tailored to this output."
+95,Stakeholders,"Title: Stakeholder briefing call script
+Role: Stakeholder Manager
+Task: Write a call script for a briefing call that builds trust and surfaces concerns.
+Inputs (paste and fill):
+- Audience: [ ]
+- Goal: [ ]
+- Time: [ ]
+- Sensitive topics: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Call flow
+- Key questions
+- Handling pushback
+- Close + next steps
+Finish with a short QA checklist tailored to this output."
+96,Stakeholders,"Title: Change champions programme
+Role: Change Manager
+Task: Design a change champions programme (select, enable, and use champions effectively).
+Inputs (paste and fill):
+- Change: [ ]
+- Org size: [ ]
+- Geography/time zones: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Selection criteria
+- Champion responsibilities
+- Enablement plan
+- Feedback loop
+- Success measures
+Finish with a short QA checklist tailored to this output."
+97,Stakeholders,"Title: Stakeholder reporting dashboard outline
+Role: Ops Analyst
+Task: Outline a stakeholder dashboard: what to include, definitions, and cadence.
+Inputs (paste and fill):
+- Stakeholder needs: [ ]
+- Metrics available: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Dashboard sections
+- Metric definitions
+- Narrative guidance
+- Governance cadence
+Finish with a short QA checklist tailored to this output."
+98,Stakeholders,"Title: Customer advisory board plan
+Role: Customer/PM
+Task: Design a customer advisory board plan (who, agenda, cadence, outputs).
+Inputs (paste and fill):
+- Customer segments: [ ]
+- Objectives: [ ]
+- Resources available: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Recruitment criteria
+- Cadence + agendas
+- Output artefacts
+- Rules + confidentiality
+Finish with a short QA checklist tailored to this output."
+99,Stakeholders,"Title: Influence without authority plan
+Role: Ops/PM
+Task: Create a plan to influence stakeholders when you have no direct authority.
+Inputs (paste and fill):
+- Goal: [ ]
+- Key stakeholders: [ ]
+- Constraints: [ ]
+- Leverage points: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Influence map
+- Tactics by stakeholder
+- Quick wins
+- Risks
+- First 2-week plan
+Finish with a short QA checklist tailored to this output."
+100,Stakeholders,"Title: Stakeholder FAQ generator
+Role: Comms Lead
+Task: Generate a complete FAQ for stakeholders, including 'hard questions' and answers with caveats.
+Inputs (paste and fill):
+- Topic/change: [ ]
+- Known constraints: [ ]
+- What you can/can't promise: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- FAQ (20–30 Qs)
+- Answer guidelines (what not to say)
+- Escalation triggers
+Finish with a short QA checklist tailored to this output."
+101,Hiring,"Title: Role scorecard (outcomes-first)
+Role: Hiring Manager
+Task: Create a role scorecard focusing on outcomes, competencies, and must-haves.
+Inputs (paste and fill):
+- Role title: [ ]
+- Team context: [ ]
+- Top 5 outcomes in first 6 months: [ ]
+- Must-have skills: [ ]
+- Nice-to-haves: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Role mission
+- 6-month outcomes
+- Competency rubric
+- Must-haves vs nice-to-haves
+- Red flags
+Finish with a short QA checklist tailored to this output."
+102,Hiring,"Title: Job description that attracts the right candidates
+Role: Hiring Manager
+Task: Write a job description that is clear, inclusive, and specific about what success looks like.
+Inputs (paste and fill):
+- Role title: [ ]
+- Level: [ ]
+- Location/remote: [ ]
+- Key responsibilities: [ ]
+- Must-haves: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Avoid clichés and inflated language
+Output (Markdown):
+- Job ad
+- About the team
+- What success looks like (90/180 days)
+- How to apply
+- Equal opportunities note
+Finish with a short QA checklist tailored to this output."
+103,Hiring,"Title: Interview plan (multi-stage)
+Role: Recruiter/Hiring Manager
+Task: Design an interview process that assesses the right things with minimal candidate pain.
+Inputs (paste and fill):
+- Role: [ ]
+- Number of stages desired: [ ]
+- Key competencies to test: [ ]
+- Time constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Stages overview
+- What each stage assesses
+- Interview panel roles
+- Candidate communication timeline
+- Decision rules
+Finish with a short QA checklist tailored to this output."
+104,Hiring,"Title: Structured interview question bank
+Role: Hiring Manager
+Task: Create structured behavioural questions mapped to competencies, with scoring rubrics.
+Inputs (paste and fill):
+- Role: [ ]
+- Competencies: [ ]
+- Seniority: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Question bank by competency
+- What good looks like
+- Scoring rubric (1–5)
+- Follow-up probes
+- Red flags
+Finish with a short QA checklist tailored to this output."
+105,Hiring,"Title: Work sample / case exercise
+Role: Hiring Manager
+Task: Design a work-sample exercise that mirrors the job and can be graded fairly.
+Inputs (paste and fill):
+- Role: [ ]
+- Realistic task: [ ]
+- Time allowed: [ ]
+- What to avoid (e.g., unpaid huge work): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep candidate time reasonable
+Output (Markdown):
+- Exercise brief
+- Inputs provided
+- Expected output format
+- Grading rubric
+- Anti-bias notes
+Finish with a short QA checklist tailored to this output."
+106,Hiring,"Title: Candidate screening questions
+Role: Recruiter
+Task: Create screening questions to quickly identify fit and eliminate misalignment early.
+Inputs (paste and fill):
+- Role: [ ]
+- Non-negotiables: [ ]
+- Constraints (salary, location): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Screening question list
+- Ideal answers
+- Deal-breakers
+- Script for short phone screen
+Finish with a short QA checklist tailored to this output."
+107,Hiring,"Title: CV review rubric
+Role: Hiring Manager
+Task: Create a CV review rubric to reduce bias and increase consistency.
+Inputs (paste and fill):
+- Role: [ ]
+- Key signals: [ ]
+- Red flags: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Rubric categories
+- Scoring guide
+- Examples of evidence
+- Calibration tips
+Finish with a short QA checklist tailored to this output."
+108,Hiring,"Title: Interview debrief template
+Role: Hiring Manager
+Task: Create a debrief template that forces evidence-based decisions.
+Inputs (paste and fill):
+- Role: [ ]
+- Stages/panel: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Debrief form
+- Evidence prompts
+- Bar-raiser questions
+- Decision summary format
+Finish with a short QA checklist tailored to this output."
+109,Hiring,"Title: Reference check script
+Role: Hiring Manager
+Task: Write a reference check script that validates performance and behaviour respectfully.
+Inputs (paste and fill):
+- Role: [ ]
+- Key concerns to validate: [ ]
+- Competencies: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Intro + consent script
+- Question list
+- Red flags
+- How to document notes
+Finish with a short QA checklist tailored to this output."
+110,Hiring,"Title: Offer letter essentials checklist
+Role: Hiring Manager
+Task: Create a checklist of offer essentials to avoid mistakes and mismatched expectations.
+Inputs (paste and fill):
+- Role: [ ]
+- Compensation components: [ ]
+- Start date target: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Offer checklist
+- Negotiation boundaries
+- Candidate comms template
+Finish with a short QA checklist tailored to this output."
+111,Hiring,"Title: Rejection email templates (kind + clear)
+Role: Recruiter
+Task: Write rejection emails for different stages (post-screen, post-interview, final).
+Inputs (paste and fill):
+- Role: [ ]
+- Stage reached: [ ]
+- Feedback policy (can/can't give details): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Be respectful and concise
+Output (Markdown):
+- Templates for 3 stages
+- Optional feedback snippets
+- Keep-in-touch line
+Finish with a short QA checklist tailored to this output."
+112,Hiring,"Title: Sourcing persona and channels plan
+Role: Recruiter
+Task: Define the ideal candidate persona and where to find them.
+Inputs (paste and fill):
+- Role: [ ]
+- Industry: [ ]
+- Must-haves: [ ]
+- Budget constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Candidate persona
+- Search keywords
+- Channels shortlist
+- Outreach message templates
+Finish with a short QA checklist tailored to this output."
+113,Hiring,"Title: Outreach message (cold)
+Role: Recruiter
+Task: Write a cold outreach message that is specific and non-spammy.
+Inputs (paste and fill):
+- Role: [ ]
+- Why candidate might fit: [ ]
+- Why role is compelling: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Under 120 words
+Output (Markdown):
+- Message
+- Subject options (3)
+- Follow-up sequence (2 touches)
+Finish with a short QA checklist tailored to this output."
+114,Hiring,"Title: Hiring plan timeline
+Role: Hiring Manager
+Task: Create a hiring plan with timeline, responsibilities, and risks.
+Inputs (paste and fill):
+- Role: [ ]
+- Target start date: [ ]
+- Interview stages: [ ]
+- Stakeholders: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Timeline
+- RACI
+- Risks + mitigations
+- Comms plan
+Finish with a short QA checklist tailored to this output."
+115,Hiring,"Title: Compensation benchmarking narrative
+Role: Hiring Manager
+Task: Write a compensation rationale narrative to align internal stakeholders.
+Inputs (paste and fill):
+- Role: [ ]
+- Market data (if any): [ ]
+- Internal ranges: [ ]
+- Equity/benefits: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Rationale
+- Range proposal
+- Internal equity considerations
+- Approval asks
+Finish with a short QA checklist tailored to this output."
+116,Hiring,"Title: Candidate experience audit
+Role: Recruiter
+Task: Audit the hiring funnel for candidate experience and propose improvements.
+Inputs (paste and fill):
+- Current process (paste): [ ]
+- Drop-off points: [ ]
+- Feedback: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Audit findings
+- Quick wins
+- New comms templates
+- Metrics to track
+Finish with a short QA checklist tailored to this output."
+117,Hiring,"Title: Onboarding handover to manager
+Role: Recruiter/Ops
+Task: Create a clean handover pack from hiring to onboarding so nothing falls through.
+Inputs (paste and fill):
+- Candidate details: [ ]
+- Role: [ ]
+- Agreements made: [ ]
+- Risks/needs: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Handover doc
+- First week plan outline
+- Key accommodations/needs (if applicable)
+- Check-in schedule
+Finish with a short QA checklist tailored to this output."
+118,Hiring,"Title: Interview training micro-guide
+Role: Recruiter
+Task: Create a short guide to train interviewers on structure and bias reduction.
+Inputs (paste and fill):
+- Role types: [ ]
+- Common interviewer mistakes: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Do/Don't
+- How to ask behavioural questions
+- Scoring guidance
+- Bias pitfalls
+- Calibration plan
+Finish with a short QA checklist tailored to this output."
+119,Hiring,"Title: Panel interview agenda
+Role: Hiring Manager
+Task: Design a panel interview agenda that avoids repetition and tests distinct areas.
+Inputs (paste and fill):
+- Role: [ ]
+- Panel members + focus areas: [ ]
+- Time available: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Agenda
+- Role split
+- Questions per member
+- Candidate questions time
+- Debrief instructions
+Finish with a short QA checklist tailored to this output."
+120,Hiring,"Title: Hiring metrics dashboard spec
+Role: Recruiting Ops
+Task: Specify a hiring metrics dashboard (definitions + targets).
+Inputs (paste and fill):
+- Hiring goals: [ ]
+- Current funnel data (if any): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Metrics list + definitions
+- Targets
+- Data sources
+- Cadence and owners
+Finish with a short QA checklist tailored to this output."
+121,Hiring,"Title: Competency framework for a function
+Role: People Ops
+Task: Create a competency framework for a function to support consistent hiring and progression.
+Inputs (paste and fill):
+- Function: [ ]
+- Levels needed: [ ]
+- Culture/values: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Competencies by level
+- Behavioural indicators
+- Assessment methods
+- How to use it
+Finish with a short QA checklist tailored to this output."
+122,Hiring,"Title: Bias-safe 'must have' rewrite
+Role: Recruiter
+Task: Rewrite must-have requirements to reduce unnecessary barriers and widen the pool.
+Inputs (paste and fill):
+- Current requirements (paste): [ ]
+- True constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Avoid degree inflation
+Output (Markdown):
+- Rewritten requirements
+- Rationale per change
+- Risk notes
+Finish with a short QA checklist tailored to this output."
+123,Hiring,"Title: Offer negotiation call script
+Role: Hiring Manager
+Task: Write a script for an offer negotiation call that is warm, clear, and aligned to boundaries.
+Inputs (paste and fill):
+- Role: [ ]
+- Offer details: [ ]
+- Negotiation room: [ ]
+- Candidate priorities (if known): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Call script
+- Questions to uncover priorities
+- Concession plan
+- Close + next steps
+Finish with a short QA checklist tailored to this output."
+124,Hiring,"Title: Probation success plan
+Role: Hiring Manager
+Task: Create a probation success plan with measurable goals and support.
+Inputs (paste and fill):
+- Role: [ ]
+- Probation length: [ ]
+- Key outcomes: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Goals by month
+- Support/resources
+- Check-in cadence
+- Pass/fail criteria
+Finish with a short QA checklist tailored to this output."
+125,Hiring,"Title: Hiring risk assessment
+Role: Hiring Manager
+Task: Identify risks in hiring for a role and propose mitigations (process, sourcing, assessment).
+Inputs (paste and fill):
+- Role: [ ]
+- Timeline pressure: [ ]
+- Market constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Risks table
+- Mitigations
+- Early warning indicators
+- Fallback plan
+Finish with a short QA checklist tailored to this output."
+126,Performance,"Title: OKR draft for an individual
+Role: People Manager
+Task: Draft OKRs for an individual aligned to team goals, with measurable key results.
+Inputs (paste and fill):
+- Role: [ ]
+- Team goals/OKRs (paste): [ ]
+- Responsibilities: [ ]
+- Time period: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Objective(s)
+- Key results (SMART)
+- Initiatives
+- Risks/assumptions
+Finish with a short QA checklist tailored to this output."
+127,Performance,"Title: Performance review narrative (evidence-based)
+Role: People Manager
+Task: Write an evidence-based performance review narrative from notes and examples.
+Inputs (paste and fill):
+- Employee role/level: [ ]
+- Period: [ ]
+- Examples of work (paste): [ ]
+- Feedback received (paste): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Do not invent evidence; label gaps
+Output (Markdown):
+- Summary rating rationale
+- Strengths (with evidence)
+- Areas to improve (with evidence)
+- Impact summary
+- Development plan
+Finish with a short QA checklist tailored to this output."
+128,Performance,"Title: Development plan (3 months)
+Role: Manager/Coach
+Task: Create a 3-month development plan with goals, activities, and checkpoints.
+Inputs (paste and fill):
+- Current strengths: [ ]
+- Development areas: [ ]
+- Role aspirations: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Development goals
+- Activities (on-the-job, learning, mentoring)
+- Milestones
+- Check-in questions
+- Success measures
+Finish with a short QA checklist tailored to this output."
+129,Performance,"Title: Constructive feedback message
+Role: Manager
+Task: Draft a constructive feedback message using SBI (Situation–Behaviour–Impact).
+Inputs (paste and fill):
+- Situation: [ ]
+- Observed behaviour: [ ]
+- Impact: [ ]
+- Desired change: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep tone respectful
+Output (Markdown):
+- Feedback message
+- Questions to invite perspective
+- Agreement + next steps
+Finish with a short QA checklist tailored to this output."
+130,Performance,"Title: Recognition message that lands
+Role: Manager
+Task: Write a recognition message that is specific, timely, and linked to impact.
+Inputs (paste and fill):
+- What they did: [ ]
+- Impact: [ ]
+- Audience (private/public): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Recognition message
+- Optional short version (Slack)
+- Optional longer version (email)
+Finish with a short QA checklist tailored to this output."
+131,Performance,"Title: Performance Improvement Plan (PIP) draft
+Role: People Manager
+Task: Draft a fair PIP with measurable expectations and support, aligned to policy constraints.
+Inputs (paste and fill):
+- Role: [ ]
+- Performance gaps (facts): [ ]
+- Timeline: [ ]
+- Support/resources: [ ]
+- Policy constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Be factual and specific
+Output (Markdown):
+- PIP overview
+- Expectations by area
+- Support plan
+- Check-in schedule
+- Success/failure criteria
+Finish with a short QA checklist tailored to this output."
+132,Performance,"Title: 1:1 coaching agenda for low morale
+Role: Manager
+Task: Create a coaching agenda for a 1:1 where morale is low, to understand and support.
+Inputs (paste and fill):
+- Context: [ ]
+- What you've observed: [ ]
+- Support available: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Agenda
+- Empathy questions
+- Problem-solving questions
+- Next steps
+- Follow-up plan
+Finish with a short QA checklist tailored to this output."
+133,Performance,"Title: Behavioural expectations agreement
+Role: Manager
+Task: Create a behavioural expectations agreement document after a tough conversation.
+Inputs (paste and fill):
+- Behaviour issue: [ ]
+- Examples: [ ]
+- Desired behaviour: [ ]
+- Timeline: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Agreement document
+- Examples (acceptable/unacceptable)
+- Checkpoints
+- Consequences + escalation
+Finish with a short QA checklist tailored to this output."
+134,Performance,"Title: Promotion case outline
+Role: Manager
+Task: Create a promotion case outline with evidence mapped to level expectations.
+Inputs (paste and fill):
+- Current level: [ ]
+- Target level: [ ]
+- Level criteria (paste): [ ]
+- Evidence/examples: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Executive summary
+- Evidence by criterion
+- Impact metrics
+- Peer feedback summary
+- Risks/areas to strengthen
+Finish with a short QA checklist tailored to this output."
+135,Performance,"Title: Calibration prep pack
+Role: People Manager
+Task: Prepare a calibration pack that summarises performance fairly and consistently.
+Inputs (paste and fill):
+- Employee list + roles: [ ]
+- Key achievements per person: [ ]
+- Ratings guidance: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Per-person summary cards
+- Key evidence bullets
+- Risks/bias checks
+- Questions for calibration
+Finish with a short QA checklist tailored to this output."
+136,Performance,"Title: Skill gap analysis
+Role: Manager/Coach
+Task: Analyse skills gaps for an employee relative to role expectations and propose actions.
+Inputs (paste and fill):
+- Role expectations (paste): [ ]
+- Current performance notes: [ ]
+- Self-assessment (if any): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Gap analysis table
+- Priority gaps
+- Actions
+- Timeline
+- Measures of progress
+Finish with a short QA checklist tailored to this output."
+137,Performance,"Title: Team performance health check
+Role: Ops/People Manager
+Task: Assess team performance health (process, morale, output) and propose interventions.
+Inputs (paste and fill):
+- Team goals: [ ]
+- Symptoms: [ ]
+- Data available: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Assessment
+- Root causes hypotheses
+- Interventions (quick/medium)
+- Measurement plan
+Finish with a short QA checklist tailored to this output."
+138,Performance,"Title: 360 feedback synthesis
+Role: Manager/HR
+Task: Synthesize 360 feedback into themes with actionable next steps.
+Inputs (paste and fill):
+- Raw feedback (paste): [ ]
+- Role context: [ ]
+- What feedback is conflicting: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Protect confidentiality; anonymise
+Output (Markdown):
+- Themes
+- Evidence snippets
+- Strengths
+- Growth areas
+- Action plan
+Finish with a short QA checklist tailored to this output."
+139,Performance,"Title: Goal reset mid-cycle
+Role: Manager
+Task: Draft a goal reset proposal when priorities have changed mid-cycle.
+Inputs (paste and fill):
+- Original goals: [ ]
+- New priorities: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Rationale
+- Proposed new goals
+- What is deprioritised
+- Impact on metrics
+- Ask/approval
+Finish with a short QA checklist tailored to this output."
+140,Performance,"Title: Difficult feedback rehearsal
+Role: Coach
+Task: Create a rehearsal script for giving difficult feedback, including likely responses.
+Inputs (paste and fill):
+- Feedback topic: [ ]
+- Relationship context: [ ]
+- Desired outcome: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Script
+- Likely reactions + responses
+- Boundaries
+- Close + next steps
+Finish with a short QA checklist tailored to this output."
+141,Performance,"Title: Underperformance investigation plan
+Role: Manager
+Task: Create a structured plan to diagnose underperformance (skills, clarity, resources, motivation).
+Inputs (paste and fill):
+- Symptoms: [ ]
+- Timeline: [ ]
+- Expectations set so far: [ ]
+- Context: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Diagnosis questions
+- Data to gather
+- Hypotheses
+- Interventions
+- Decision points
+Finish with a short QA checklist tailored to this output."
+142,Performance,"Title: New manager first 30 days plan
+Role: New Manager
+Task: Create a 30-day plan for a new manager to establish trust and operating rhythm.
+Inputs (paste and fill):
+- Team size: [ ]
+- Current challenges: [ ]
+- Stakeholders: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Week-by-week plan
+- 1:1 question bank
+- Operating cadence
+- Quick wins
+- Success measures
+Finish with a short QA checklist tailored to this output."
+143,Performance,"Title: Delegation plan
+Role: Manager
+Task: Create a delegation plan that matches tasks to capability and develops the team.
+Inputs (paste and fill):
+- Tasks list: [ ]
+- Team members + strengths: [ ]
+- Risk tolerance: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Delegation matrix
+- Task briefs template
+- Check-in cadence
+- Risk controls
+Finish with a short QA checklist tailored to this output."
+144,Performance,"Title: Performance conversation notes (documentation)
+Role: Manager
+Task: Turn conversation notes into neutral documentation suitable for HR files.
+Inputs (paste and fill):
+- Notes (paste): [ ]
+- Date: [ ]
+- Attendees: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Neutral tone; factual
+Output (Markdown):
+- Documented summary
+- Agreements
+- Actions
+- Next review date
+Finish with a short QA checklist tailored to this output."
+145,Performance,"Title: Burnout risk check + plan
+Role: Manager
+Task: Assess burnout risk signals and create a supportive plan that respects boundaries.
+Inputs (paste and fill):
+- Signals observed: [ ]
+- Workload context: [ ]
+- Support options: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Avoid medical claims; focus on workplace actions
+Output (Markdown):
+- Assessment (signals)
+- Immediate steps
+- Workload adjustments
+- Check-in plan
+- Escalation if risk increases
+Finish with a short QA checklist tailored to this output."
+146,Performance,"Title: Team norms and expectations
+Role: Manager
+Task: Create team norms (communication, response times, meeting etiquette) to improve performance.
+Inputs (paste and fill):
+- Team context: [ ]
+- Pain points: [ ]
+- Time zones: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Norms document
+- Examples
+- Rollout plan
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+147,Performance,"Title: Performance metrics for a role
+Role: Manager/Ops
+Task: Define measurable performance metrics for a role that align to outcomes.
+Inputs (paste and fill):
+- Role: [ ]
+- Outcomes: [ ]
+- Data sources: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Metrics + definitions
+- Targets
+- How to measure
+- Risks of gaming + mitigations
+Finish with a short QA checklist tailored to this output."
+148,Performance,"Title: Coaching plan for communication skills
+Role: Coach
+Task: Create a coaching plan to improve communication: clarity, brevity, stakeholder handling.
+Inputs (paste and fill):
+- Current issues: [ ]
+- Examples (paste): [ ]
+- Context (stakeholders): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Skills breakdown
+- Exercises
+- Practice plan
+- Feedback loop
+- Milestones
+Finish with a short QA checklist tailored to this output."
+149,Performance,"Title: Succession plan for a key role
+Role: Manager
+Task: Create a succession plan including risk assessment and development actions.
+Inputs (paste and fill):
+- Key role: [ ]
+- Current incumbent: [ ]
+- Potential successors: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Risk assessment
+- Successor readiness matrix
+- Development actions
+- Timeline
+- Contingency plan
+Finish with a short QA checklist tailored to this output."
+150,Performance,"Title: Team performance narrative for leadership
+Role: Manager
+Task: Write a leadership-ready narrative explaining team performance, wins, and needs.
+Inputs (paste and fill):
+- Period: [ ]
+- Wins: [ ]
+- Challenges: [ ]
+- Asks: [ ]
+- Metrics: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Narrative
+- Key metrics
+- Risks
+- Asks
+- Next period focus
+Finish with a short QA checklist tailored to this output."
+151,Reporting,"Title: Weekly ops report (narrative + metrics)
+Role: Ops Analyst
+Task: Create a weekly ops report that combines narrative, metrics, and actions.
+Inputs (paste and fill):
+- Audience: [ ]
+- Key metrics (paste): [ ]
+- Wins: [ ]
+- Issues: [ ]
+- Next week priorities: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Headline summary
+- Metrics table
+- Insights (so what)
+- Risks
+- Actions/owners
+Finish with a short QA checklist tailored to this output."
+152,Reporting,"Title: Monthly business review (MBR) pack outline
+Role: Ops/PM
+Task: Outline an MBR pack with the right structure and story arc.
+Inputs (paste and fill):
+- Business area: [ ]
+- Top KPIs: [ ]
+- Known concerns: [ ]
+- Decisions needed: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Slide-by-slide outline
+- Narrative arc
+- Appendix contents
+- Owner list
+Finish with a short QA checklist tailored to this output."
+153,Reporting,"Title: KPI definitions catalogue
+Role: Analytics Lead
+Task: Create a KPI definitions catalogue to stop metric confusion.
+Inputs (paste and fill):
+- Metrics list: [ ]
+- Data sources: [ ]
+- Owners: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Catalogue table (name, formula, source, cadence, owner)
+- Edge cases
+- Data quality checks
+Finish with a short QA checklist tailored to this output."
+154,Reporting,"Title: Executive summary from a long report
+Role: Analyst
+Task: Summarise a long report into an exec-ready one-pager with actions.
+Inputs (paste and fill):
+- Full report text (paste): [ ]
+- Audience: [ ]
+- Decision context: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep under 350 words
+Output (Markdown):
+- Top 5 takeaways
+- Risks
+- Recommendations
+- Decisions/asks
+- Next steps
+Finish with a short QA checklist tailored to this output."
+155,Reporting,"Title: Variance analysis narrative
+Role: Finance/Ops Analyst
+Task: Explain variances (vs plan, vs last period) in plain English, with hypotheses and actions.
+Inputs (paste and fill):
+- Actuals (paste): [ ]
+- Plan/budget (paste): [ ]
+- Context events: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Variance table
+- Top drivers narrative
+- Confidence level per driver
+- Actions
+- Data gaps
+Finish with a short QA checklist tailored to this output."
+156,Reporting,"Title: Anomaly investigation brief
+Role: Ops Analyst
+Task: Create a brief to investigate a metric anomaly with a clear plan.
+Inputs (paste and fill):
+- Metric: [ ]
+- What changed: [ ]
+- Time window: [ ]
+- Related metrics: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Hypotheses
+- Data to pull
+- Checks sequence
+- Likely root causes
+- Comms plan
+Finish with a short QA checklist tailored to this output."
+157,Reporting,"Title: Board update memo
+Role: Chief of Staff
+Task: Draft a board update memo: progress, risks, and asks.
+Inputs (paste and fill):
+- Company/initiative context: [ ]
+- Progress highlights: [ ]
+- KPIs: [ ]
+- Risks: [ ]
+- Asks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep crisp; avoid fluff
+Output (Markdown):
+- Memo
+- KPI snapshot
+- Risks + mitigations
+- Asks/decisions
+Finish with a short QA checklist tailored to this output."
+158,Reporting,"Title: Dashboard commentary (what to say)
+Role: Analyst
+Task: Write commentary to accompany a dashboard so stakeholders know what matters.
+Inputs (paste and fill):
+- Dashboard KPIs: [ ]
+- Notable changes: [ ]
+- Audience: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Key messages
+- Callouts by KPI
+- Questions to anticipate
+- Actions
+Finish with a short QA checklist tailored to this output."
+159,Reporting,"Title: Operational metrics pack (definitions + visuals guidance)
+Role: Ops Analyst
+Task: Design an ops metrics pack: what to include and how to present it (text-only guidance).
+Inputs (paste and fill):
+- Process/service: [ ]
+- Available metrics: [ ]
+- Audience: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Metrics shortlist
+- Definitions
+- Presentation guidance
+- Cadence
+- Owners
+Finish with a short QA checklist tailored to this output."
+160,Reporting,"Title: Customer support report
+Role: Support Ops
+Task: Create a support report focusing on volume, SLA, quality, and root causes.
+Inputs (paste and fill):
+- Ticket data summary (paste): [ ]
+- Top issue categories: [ ]
+- SLA targets: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Metrics table
+- Top drivers
+- Quality signals
+- Improvement actions
+- Risks
+Finish with a short QA checklist tailored to this output."
+161,Reporting,"Title: Project status report (RAG + narrative)
+Role: Project Manager
+Task: Write a project status report that is honest, specific, and action-focused.
+Inputs (paste and fill):
+- Project: [ ]
+- Milestones: [ ]
+- Current status: [ ]
+- Risks/issues: [ ]
+- Dependencies: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- RAG status + rationale
+- Progress since last update
+- Next steps
+- Risks/issues table
+- Asks
+Finish with a short QA checklist tailored to this output."
+162,Reporting,"Title: OKR progress report
+Role: Ops/PM
+Task: Create an OKR progress report with confidence ratings and corrective actions.
+Inputs (paste and fill):
+- OKRs (paste): [ ]
+- Progress evidence: [ ]
+- Blockers: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- OKR table (KR, target, current, confidence)
+- Narrative
+- Corrective actions
+- Risks
+Finish with a short QA checklist tailored to this output."
+163,Reporting,"Title: Incident postmortem report
+Role: Incident Manager
+Task: Write a blameless postmortem with timeline, impact, root cause, and actions.
+Inputs (paste and fill):
+- Incident summary: [ ]
+- Timeline events (paste): [ ]
+- Impact: [ ]
+- Root cause hypothesis: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Blameless language
+Output (Markdown):
+- Summary
+- Impact
+- Timeline
+- Root cause
+- What went well/poorly
+- Action items (owner/date)
+Finish with a short QA checklist tailored to this output."
+164,Reporting,"Title: Quarterly report story arc
+Role: Analyst
+Task: Turn quarterly results into a coherent story: what happened and why it matters.
+Inputs (paste and fill):
+- Quarter highlights: [ ]
+- KPIs: [ ]
+- Major events: [ ]
+- Audience: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Narrative outline
+- Key charts to include (described)
+- Risks
+- Next quarter focus
+Finish with a short QA checklist tailored to this output."
+165,Reporting,"Title: Data quality report
+Role: Data/Analytics
+Task: Create a data quality report: issues, impact, and remediation plan.
+Inputs (paste and fill):
+- Datasets: [ ]
+- Issues observed: [ ]
+- Consumers impacted: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Issues list
+- Impact assessment
+- Root cause hypotheses
+- Fix plan
+- Monitoring plan
+Finish with a short QA checklist tailored to this output."
+166,Reporting,"Title: One-slide update (text only)
+Role: Analyst
+Task: Create a one-slide update (text-only) that could be pasted into a deck.
+Inputs (paste and fill):
+- Topic: [ ]
+- Key metrics: [ ]
+- Key message: [ ]
+- Ask: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Keep to one slide worth of text
+Output (Markdown):
+- Slide title
+- 3–5 bullets
+- Metrics line
+- Ask line
+Finish with a short QA checklist tailored to this output."
+167,Reporting,"Title: Daily operations brief
+Role: Ops Lead
+Task: Create a daily brief template for operations with standard sections.
+Inputs (paste and fill):
+- Operation type: [ ]
+- Key metrics: [ ]
+- Common incidents: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Template
+- Guidance per section
+- Escalation triggers
+Finish with a short QA checklist tailored to this output."
+168,Reporting,"Title: Reporting calendar + ownership
+Role: Ops Manager
+Task: Create a reporting calendar with owners, deadlines, and dependencies.
+Inputs (paste and fill):
+- Reports list: [ ]
+- Cadence per report: [ ]
+- Owners: [ ]
+- Due dates: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Calendar table
+- RACI
+- SLA rules
+- Escalation path
+Finish with a short QA checklist tailored to this output."
+169,Reporting,"Title: Narrative to accompany cost-saving initiative
+Role: Finance/Ops
+Task: Write a narrative explaining cost-saving actions without causing panic.
+Inputs (paste and fill):
+- Initiative: [ ]
+- Savings target: [ ]
+- Actions: [ ]
+- Risks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Use calm tone
+Output (Markdown):
+- Narrative
+- What changes/what doesn't
+- Risks + mitigations
+- FAQ
+Finish with a short QA checklist tailored to this output."
+170,Reporting,"Title: Supplier performance report
+Role: Procurement/Ops
+Task: Create a supplier performance report with KPIs and actions.
+Inputs (paste and fill):
+- Supplier: [ ]
+- SLA metrics (paste): [ ]
+- Incidents: [ ]
+- Contract context: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Scorecard
+- Trends
+- Issues
+- Corrective actions
+- Next review date
+Finish with a short QA checklist tailored to this output."
+171,Reporting,"Title: Forecast update narrative
+Role: Ops/Finance
+Task: Write an update explaining forecast changes and confidence levels.
+Inputs (paste and fill):
+- Old forecast: [ ]
+- New forecast: [ ]
+- Drivers: [ ]
+- Risks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Delta summary
+- Driver table
+- Confidence assessment
+- Actions
+Finish with a short QA checklist tailored to this output."
+172,Reporting,"Title: Risk report for leadership
+Role: Risk Manager
+Task: Create a leadership risk report with prioritised risks and mitigations.
+Inputs (paste and fill):
+- Risks list (paste): [ ]
+- Risk appetite: [ ]
+- Owners: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Top risks table
+- Changes since last report
+- Mitigations progress
+- Asks
+Finish with a short QA checklist tailored to this output."
+173,Reporting,"Title: Customer health report (CS)
+Role: Customer Success Ops
+Task: Create a customer health report with leading indicators and action plan.
+Inputs (paste and fill):
+- Customer list: [ ]
+- Health signals: [ ]
+- Renewal dates: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Health score model (simple)
+- Customer table
+- At-risk analysis
+- Actions
+Finish with a short QA checklist tailored to this output."
+174,Reporting,"Title: KPI storytelling checklist
+Role: Analyst
+Task: Create a checklist for turning KPI numbers into clear narrative insights.
+Inputs (paste and fill):
+- Audience: [ ]
+- Typical KPIs: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Checklist
+- Examples of good commentary
+- Common pitfalls
+Finish with a short QA checklist tailored to this output."
+175,Reporting,"Title: Regulatory/compliance reporting pack outline
+Role: Compliance/Ops
+Task: Outline a compliance reporting pack with evidence requirements.
+Inputs (paste and fill):
+- Regulation/policy: [ ]
+- Evidence sources: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Pack outline
+- Evidence checklist
+- Owner responsibilities
+- Audit readiness tips
+Finish with a short QA checklist tailored to this output."
+176,Customers,"Title: Customer onboarding email sequence
+Role: Customer Success
+Task: Create a short onboarding email sequence that drives activation.
+Inputs (paste and fill):
+- Product/service: [ ]
+- Customer segment: [ ]
+- Key activation steps: [ ]
+- Tone: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Email 1 (welcome)
+- Email 2 (first value)
+- Email 3 (best practices)
+- Email 4 (check-in)
+- Subject lines (2 each)
+Finish with a short QA checklist tailored to this output."
+177,Customers,"Title: Churn risk outreach message
+Role: Customer Success
+Task: Draft an outreach message to a customer showing churn signals, aiming to retain.
+Inputs (paste and fill):
+- Customer context: [ ]
+- Churn signals: [ ]
+- Value they expected: [ ]
+- Offer/next step: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Avoid defensiveness
+Output (Markdown):
+- Email
+- Call agenda
+- Follow-up actions
+Finish with a short QA checklist tailored to this output."
+178,Customers,"Title: Customer escalation plan
+Role: Customer Ops Lead
+Task: Create an escalation plan for a high-severity customer issue.
+Inputs (paste and fill):
+- Customer: [ ]
+- Issue: [ ]
+- Impact: [ ]
+- Timeline: [ ]
+- Stakeholders: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Escalation levels
+- Comms cadence
+- Roles
+- Action tracker
+- Recovery plan
+Finish with a short QA checklist tailored to this output."
+179,Customers,"Title: Support macro set (top 10 issues)
+Role: Support Ops
+Task: Create support macros (responses) for the top 10 recurring issues, with placeholders.
+Inputs (paste and fill):
+- Top issues list: [ ]
+- Tone guidance: [ ]
+- Policy constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- 10 macros with titles
+- When to use each
+- Escalation triggers
+- QA checklist
+Finish with a short QA checklist tailored to this output."
+180,Customers,"Title: Customer discovery interview script
+Role: Product/CS
+Task: Write a discovery interview script to learn needs, use cases, and decision criteria.
+Inputs (paste and fill):
+- Customer segment: [ ]
+- Hypotheses to test: [ ]
+- Time available: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Intro + consent
+- Questions (jobs-to-be-done)
+- Probes
+- Wrap-up
+- Synthesis template
+Finish with a short QA checklist tailored to this output."
+181,Customers,"Title: NPS follow-up workflow
+Role: Customer Success Ops
+Task: Design an NPS follow-up workflow for promoters, passives, and detractors.
+Inputs (paste and fill):
+- Current NPS process: [ ]
+- Resources available: [ ]
+- Escalation constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Workflows by segment
+- Templates
+- SLAs
+- Tracking metrics
+Finish with a short QA checklist tailored to this output."
+182,Customers,"Title: Customer health score model (simple)
+Role: CS Ops
+Task: Create a simple customer health score model using available signals.
+Inputs (paste and fill):
+- Signals available: [ ]
+- Renewal cycle: [ ]
+- Segments: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Model definition
+- Scoring rubric
+- Thresholds (green/amber/red)
+- Actions by status
+Finish with a short QA checklist tailored to this output."
+183,Customers,"Title: Renewal call agenda
+Role: Account Manager
+Task: Create a renewal call agenda that addresses value, risks, and next steps.
+Inputs (paste and fill):
+- Customer goals: [ ]
+- Usage/impact data: [ ]
+- Renewal date: [ ]
+- Risks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Agenda
+- Value recap prompts
+- Risk discussion prompts
+- Close + next steps
+Finish with a short QA checklist tailored to this output."
+184,Customers,"Title: Customer QBR pack outline
+Role: Account Manager
+Task: Outline a QBR pack that tells a clear story and leads to expansion opportunities.
+Inputs (paste and fill):
+- Customer: [ ]
+- KPIs/impact: [ ]
+- Product roadmap relevance: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- QBR outline
+- Data to include
+- Discussion questions
+- Expansion hypotheses
+Finish with a short QA checklist tailored to this output."
+185,Customers,"Title: Complaint response (public)
+Role: Customer Support Lead
+Task: Draft a public response to a complaint that is calm, helpful, and brand-safe.
+Inputs (paste and fill):
+- Platform (X/Google Reviews/etc.): [ ]
+- Complaint text: [ ]
+- What you can offer: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Avoid admitting liability; flag legal review if needed
+Output (Markdown):
+- Public reply
+- Private follow-up message
+- Internal notes
+Finish with a short QA checklist tailored to this output."
+186,Customers,"Title: Customer feedback synthesis
+Role: Product/CS
+Task: Synthesize raw feedback into themes, severity, and next actions.
+Inputs (paste and fill):
+- Feedback dump (paste): [ ]
+- Customer segments: [ ]
+- Known priorities: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Themes
+- Severity/impact assessment
+- Representative quotes (short)
+- Recommendations
+- Next steps
+Finish with a short QA checklist tailored to this output."
+187,Customers,"Title: Customer journey map (text)
+Role: Service Designer
+Task: Create a customer journey map in text with pain points and opportunities.
+Inputs (paste and fill):
+- Journey stages (if known): [ ]
+- Customer persona: [ ]
+- Touchpoints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Journey stages table
+- Pain points
+- Moments of truth
+- Opportunities backlog
+Finish with a short QA checklist tailored to this output."
+188,Customers,"Title: Win-back email
+Role: Customer Success
+Task: Write a win-back email to a recently churned customer with a clear offer and humility.
+Inputs (paste and fill):
+- Why they churned: [ ]
+- What changed: [ ]
+- Offer: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Email
+- Subject options (5)
+- Follow-up plan
+Finish with a short QA checklist tailored to this output."
+189,Customers,"Title: Customer success playbook (first value)
+Role: Customer Success Lead
+Task: Create a playbook to get customers to first value quickly and repeatably.
+Inputs (paste and fill):
+- Product: [ ]
+- Activation milestones: [ ]
+- Common blockers: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Milestone plan
+- Templates
+- Objection handling
+- Metrics
+Finish with a short QA checklist tailored to this output."
+190,Customers,"Title: Support SLA policy (customer-facing)
+Role: Support Ops
+Task: Draft a customer-facing SLA policy that sets expectations clearly.
+Inputs (paste and fill):
+- Support hours: [ ]
+- Channels: [ ]
+- Severity levels: [ ]
+- Response targets: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Policy
+- Severity definitions
+- Response times
+- How to raise urgent issues
+Finish with a short QA checklist tailored to this output."
+191,Customers,"Title: Customer segmentation framework
+Role: Marketing/CS Ops
+Task: Create a segmentation framework useful for prioritisation and comms.
+Inputs (paste and fill):
+- Customer list attributes available: [ ]
+- Business goals: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Segments definition
+- How to classify customers
+- Use cases for each segment
+- Risks
+Finish with a short QA checklist tailored to this output."
+192,Customers,"Title: Customer case study interview guide
+Role: Marketing/CS
+Task: Create an interview guide to produce a strong customer case study.
+Inputs (paste and fill):
+- Customer: [ ]
+- Outcome achieved: [ ]
+- Metrics: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Question list
+- Story structure
+- Proof points checklist
+- Consent and approvals
+Finish with a short QA checklist tailored to this output."
+193,Customers,"Title: Implementation plan (customer project)
+Role: Implementation Manager
+Task: Create an implementation plan with milestones, owners, and risks.
+Inputs (paste and fill):
+- Scope: [ ]
+- Timeline: [ ]
+- Customer stakeholders: [ ]
+- Internal team: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Plan timeline
+- Milestones + acceptance criteria
+- RACI
+- Risk log
+- Comms cadence
+Finish with a short QA checklist tailored to this output."
+194,Customers,"Title: Customer comms for downtime
+Role: Customer Comms Lead
+Task: Write customer communications for downtime: initial notice, updates, resolution.
+Inputs (paste and fill):
+- Incident summary: [ ]
+- ETA uncertainty: [ ]
+- Channels: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Be transparent; don't overpromise
+Output (Markdown):
+- Initial message
+- Update message template
+- Resolution message
+- FAQ
+Finish with a short QA checklist tailored to this output."
+195,Customers,"Title: Feature request response (no)
+Role: Product Support
+Task: Respond to a feature request you can't do soon, while maintaining trust.
+Inputs (paste and fill):
+- Feature request: [ ]
+- Reason it's not planned: [ ]
+- Alternatives: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Response message
+- What we can do instead
+- How we’ll keep them updated
+Finish with a short QA checklist tailored to this output."
+196,Customers,"Title: Handling price increase comms
+Role: Account Manager
+Task: Draft communications for a price increase with justification and options.
+Inputs (paste and fill):
+- Increase details: [ ]
+- Customer segment: [ ]
+- Value delivered: [ ]
+- Concessions possible: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Be firm but fair
+Output (Markdown):
+- Email
+- FAQ
+- Call talk track
+Finish with a short QA checklist tailored to this output."
+197,Customers,"Title: Customer support triage rules
+Role: Support Ops
+Task: Design triage rules so urgent and high-value cases are prioritised fairly.
+Inputs (paste and fill):
+- Ticket types: [ ]
+- SLA targets: [ ]
+- Customer tiers: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Triage rubric
+- Priority matrix
+- Escalation triggers
+- Metrics to monitor
+Finish with a short QA checklist tailored to this output."
+198,Customers,"Title: CS playbook for low usage
+Role: Customer Success
+Task: Create a playbook for customers with low usage: diagnose, intervene, track.
+Inputs (paste and fill):
+- Usage signals: [ ]
+- Customer goals: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Diagnosis steps
+- Interventions
+- Comms templates
+- Success metrics
+Finish with a short QA checklist tailored to this output."
+199,Customers,"Title: Customer communication tone guide
+Role: Brand/Comms
+Task: Create a tone guide for customer communications with examples and anti-examples.
+Inputs (paste and fill):
+- Brand traits: [ ]
+- Do/don't: [ ]
+- Channels: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Tone principles
+- Examples
+- Anti-examples
+- Checklist
+Finish with a short QA checklist tailored to this output."
+200,Customers,"Title: Customer-facing knowledge base article
+Role: Support Writer
+Task: Write a knowledge base article from a rough description, with clear steps and screenshots placeholders.
+Inputs (paste and fill):
+- Topic: [ ]
+- Rough steps (paste): [ ]
+- Common errors: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Include 'If you see X' troubleshooting
+Output (Markdown):
+- Article
+- Steps
+- Troubleshooting
+- Related articles suggestions
+Finish with a short QA checklist tailored to this output."
+201,Planning,"Title: Quarterly plan (objectives + initiatives)
+Role: Ops/Programme Lead
+Task: Create a quarterly plan with objectives, initiatives, owners, and milestones.
+Inputs (paste and fill):
+- Team/area: [ ]
+- Strategic goals: [ ]
+- Constraints: [ ]
+- Candidate initiatives: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Objectives
+- Initiatives table (owner, milestone, impact)
+- Timeline
+- Risks
+- Dependencies
+Finish with a short QA checklist tailored to this output."
+202,Planning,"Title: 90-day plan for a new role
+Role: New Hire
+Task: Create a 30/60/90 day plan with outcomes and learning goals.
+Inputs (paste and fill):
+- Role: [ ]
+- Context: [ ]
+- Key stakeholders: [ ]
+- Immediate priorities: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- 30/60/90 plan
+- Stakeholder map
+- Quick wins
+- Risks + mitigations
+Finish with a short QA checklist tailored to this output."
+203,Planning,"Title: Capacity plan (simple)
+Role: Ops Manager
+Task: Create a simple capacity plan balancing BAU and projects.
+Inputs (paste and fill):
+- Team members: [ ]
+- Available hours/week: [ ]
+- BAU load: [ ]
+- Project list: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Capacity table
+- Allocation proposal
+- Trade-offs
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+204,Planning,"Title: Scenario planning (3 scenarios)
+Role: Strategy/Ops
+Task: Produce scenario plans (base/best/worst) with triggers and actions.
+Inputs (paste and fill):
+- Topic: [ ]
+- Key uncertainties: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Scenarios
+- Indicators/triggers
+- Actions by scenario
+- Decision points
+Finish with a short QA checklist tailored to this output."
+205,Planning,"Title: Prioritisation framework + applied example
+Role: Ops Lead
+Task: Create a prioritisation framework and apply it to your backlog items.
+Inputs (paste and fill):
+- Backlog items (paste): [ ]
+- Strategy/OKRs: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Framework definition
+- Scoring table
+- Ranked list
+- Recommendation
+Finish with a short QA checklist tailored to this output."
+206,Planning,"Title: Annual planning calendar
+Role: Ops Manager
+Task: Create an annual planning calendar with milestones and owners.
+Inputs (paste and fill):
+- Business cycles: [ ]
+- Key events: [ ]
+- Reporting needs: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Calendar
+- Owners
+- Dependencies
+- Preparation checklists
+Finish with a short QA checklist tailored to this output."
+207,Planning,"Title: Roadmap narrative (non-technical)
+Role: Product/Ops
+Task: Write a roadmap narrative for non-technical stakeholders, including what is not planned.
+Inputs (paste and fill):
+- Roadmap items: [ ]
+- Customer needs: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Narrative
+- Now/Next/Later table
+- What we’re not doing + why
+- FAQ
+Finish with a short QA checklist tailored to this output."
+208,Planning,"Title: Decision log system
+Role: Ops Excellence
+Task: Design a decision log system to improve transparency and speed.
+Inputs (paste and fill):
+- Tooling available: [ ]
+- Decision types: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Decision log template
+- Operating rules
+- Access rules
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+209,Planning,"Title: Milestone plan for a project
+Role: Project Manager
+Task: Create a milestone plan with acceptance criteria and owners.
+Inputs (paste and fill):
+- Project goal: [ ]
+- Timeline constraints: [ ]
+- Workstreams: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Milestones table
+- Acceptance criteria
+- Dependencies
+- Risks
+Finish with a short QA checklist tailored to this output."
+210,Planning,"Title: OKR cascade (company to team)
+Role: Ops/Strategy
+Task: Cascade company OKRs into team OKRs and propose alignment links.
+Inputs (paste and fill):
+- Company OKRs (paste): [ ]
+- Team mission: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Team OKRs
+- Alignment mapping
+- Assumptions
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+211,Planning,"Title: Meeting cadence design for a team
+Role: Team Lead
+Task: Design an operating cadence (meetings + reports) that supports execution without overload.
+Inputs (paste and fill):
+- Team goals: [ ]
+- Time zones: [ ]
+- Current meetings (paste): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Cadence proposal
+- Purpose per meeting
+- Who attends
+- Rules (cancel criteria)
+Finish with a short QA checklist tailored to this output."
+212,Planning,"Title: Backlog grooming plan
+Role: Ops/Product Ops
+Task: Create a backlog grooming plan with definitions, cadence, and responsibilities.
+Inputs (paste and fill):
+- Tool: [ ]
+- Current pain points: [ ]
+- Definition of ready: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Plan
+- Roles
+- Templates
+- Metrics
+Finish with a short QA checklist tailored to this output."
+213,Planning,"Title: Budget planning worksheet outline
+Role: Finance/Ops
+Task: Create a budget planning outline with categories, assumptions, and review process.
+Inputs (paste and fill):
+- Budget scope: [ ]
+- Known costs: [ ]
+- Growth plans: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Categories
+- Assumptions log
+- Review workflow
+- Risk buffer guidance
+Finish with a short QA checklist tailored to this output."
+214,Planning,"Title: Launch plan checklist
+Role: Programme Manager
+Task: Create a launch plan checklist with readiness gates.
+Inputs (paste and fill):
+- What is launching: [ ]
+- Audience: [ ]
+- Date: [ ]
+- Dependencies: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Launch checklist
+- Readiness gates
+- Roles
+- Comms plan
+Finish with a short QA checklist tailored to this output."
+215,Planning,"Title: Strategic one-page (strategy on a page)
+Role: Strategy
+Task: Create a strategy-on-a-page: vision, pillars, bets, metrics.
+Inputs (paste and fill):
+- Vision: [ ]
+- Constraints: [ ]
+- Market context: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- One-page strategy
+- Pillars
+- Key bets
+- Metrics
+- Risks
+Finish with a short QA checklist tailored to this output."
+216,Planning,"Title: Resource request business case
+Role: Ops Lead
+Task: Write a business case requesting resources (headcount/tools) with evidence.
+Inputs (paste and fill):
+- What you need: [ ]
+- Why: [ ]
+- Impact: [ ]
+- Alternatives tried: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Business case
+- Costs
+- Benefits
+- Risks
+- Ask
+Finish with a short QA checklist tailored to this output."
+217,Planning,"Title: Change roadmap (phased)
+Role: Change Manager
+Task: Create a phased roadmap for a change with adoption activities.
+Inputs (paste and fill):
+- Change: [ ]
+- Stakeholders: [ ]
+- Timeline: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Phases
+- Activities
+- Comms
+- Training
+- Measures of adoption
+Finish with a short QA checklist tailored to this output."
+218,Planning,"Title: Weekly planning ritual
+Role: Ops Lead
+Task: Design a weekly planning ritual that aligns priorities and protects focus time.
+Inputs (paste and fill):
+- Team: [ ]
+- Work types: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Ritual steps
+- Agenda
+- Templates
+- Rules
+Finish with a short QA checklist tailored to this output."
+219,Planning,"Title: Stakeholder alignment plan for planning cycle
+Role: Programme Manager
+Task: Create a plan to align stakeholders ahead of planning to reduce last-minute conflicts.
+Inputs (paste and fill):
+- Planning cycle dates: [ ]
+- Stakeholders: [ ]
+- Known conflicts: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Alignment steps
+- Pre-reads
+- Decision points
+- Comms
+Finish with a short QA checklist tailored to this output."
+220,Planning,"Title: Risk-based contingency plan
+Role: Ops Lead
+Task: Create a contingency plan for a plan: what could go wrong and what to do.
+Inputs (paste and fill):
+- Plan summary: [ ]
+- Top uncertainties: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Contingencies
+- Triggers
+- Actions
+- Owners
+Finish with a short QA checklist tailored to this output."
+221,Planning,"Title: Timeboxing plan for competing priorities
+Role: Ops/PM
+Task: Create a timeboxing plan to handle competing priorities while maintaining delivery.
+Inputs (paste and fill):
+- Priorities list: [ ]
+- Deadlines: [ ]
+- Capacity: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Timebox schedule
+- Trade-offs
+- Communication plan
+Finish with a short QA checklist tailored to this output."
+222,Planning,"Title: Process to kill/stop projects
+Role: Portfolio Manager
+Task: Design a kill-switch process for stopping projects early when value isn't there.
+Inputs (paste and fill):
+- Current projects list: [ ]
+- Decision-makers: [ ]
+- Criteria: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Criteria
+- Review cadence
+- Decision workflow
+- Comms template
+Finish with a short QA checklist tailored to this output."
+223,Planning,"Title: Planning assumptions log
+Role: Ops
+Task: Create an assumptions log template and rules for keeping it updated.
+Inputs (paste and fill):
+- Planning context: [ ]
+- Typical assumptions: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Template
+- Update rules
+- Review cadence
+- Examples
+Finish with a short QA checklist tailored to this output."
+224,Planning,"Title: OKR review meeting pack
+Role: Ops
+Task: Create a pack for an OKR review meeting: data, narrative, decisions.
+Inputs (paste and fill):
+- OKRs: [ ]
+- Progress data: [ ]
+- Issues: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Pack outline
+- Tables
+- Decision questions
+- Actions
+Finish with a short QA checklist tailored to this output."
+225,Planning,"Title: Portfolio view (projects)
+Role: Portfolio Manager
+Task: Create a portfolio view template: status, value, risk, dependencies.
+Inputs (paste and fill):
+- Projects list: [ ]
+- Status info: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Portfolio table
+- Definitions
+- Review cadence
+- Escalation triggers
+Finish with a short QA checklist tailored to this output."
+226,Risk,"Title: Risk register (operational)
+Role: Risk Manager
+Task: Create an operational risk register with scoring and mitigations.
+Inputs (paste and fill):
+- Context/area: [ ]
+- Known risks (if any): [ ]
+- Risk appetite: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Risk register table (risk, cause, impact, likelihood, score)
+- Mitigations
+- Owners
+- Review cadence
+Finish with a short QA checklist tailored to this output."
+227,Risk,"Title: FMEA-style risk analysis
+Role: Ops Excellence
+Task: Run an FMEA-style analysis on a process to prioritise failure modes.
+Inputs (paste and fill):
+- Process steps (paste): [ ]
+- Known incidents: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Failure modes table (failure, effect, cause, severity, occurrence, detection, RPN)
+- Top priorities
+- Mitigations
+Finish with a short QA checklist tailored to this output."
+228,Risk,"Title: Business continuity plan outline
+Role: BCP Lead
+Task: Create a business continuity plan outline for a team/service.
+Inputs (paste and fill):
+- Critical services: [ ]
+- RTO/RPO expectations: [ ]
+- Dependencies: [ ]
+- Workarounds: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- BCP outline
+- Critical dependencies
+- Workarounds
+- Comms plan
+- Testing cadence
+Finish with a short QA checklist tailored to this output."
+229,Risk,"Title: Crisis communications templates
+Role: Incident Comms
+Task: Create crisis comms templates for internal and external audiences.
+Inputs (paste and fill):
+- Incident type: [ ]
+- Channels: [ ]
+- Approval roles: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Avoid speculation; be transparent about unknowns
+Output (Markdown):
+- Internal update template
+- Customer update template
+- Leadership brief template
+- FAQ skeleton
+Finish with a short QA checklist tailored to this output."
+230,Risk,"Title: Risk appetite statement draft
+Role: Risk/Leadership
+Task: Draft a risk appetite statement in plain English with examples.
+Inputs (paste and fill):
+- Organisation context: [ ]
+- Regulatory constraints: [ ]
+- Key risk areas: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Risk appetite statement
+- Examples of acceptable vs unacceptable risk
+- Decision guidelines
+Finish with a short QA checklist tailored to this output."
+231,Risk,"Title: Third-party/vendor risk assessment
+Role: Procurement/Risk
+Task: Assess risk of a vendor and propose controls and due diligence questions.
+Inputs (paste and fill):
+- Vendor/service: [ ]
+- Data involved: [ ]
+- Criticality: [ ]
+- Contract terms: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Risk assessment
+- Due diligence questions
+- Controls/contract clauses to consider
+- Residual risk
+Finish with a short QA checklist tailored to this output."
+232,Risk,"Title: Project risk log + mitigation plan
+Role: Project Manager
+Task: Create a project risk log with mitigations, triggers, and owners.
+Inputs (paste and fill):
+- Project summary: [ ]
+- Timeline: [ ]
+- Dependencies: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Risk log table (risk, trigger, owner, mitigation, contingency)
+- Review cadence
+- Top 5 focus risks
+Finish with a short QA checklist tailored to this output."
+233,Risk,"Title: Data privacy risk checklist (non-legal)
+Role: Privacy-aware Ops
+Task: Create a practical checklist to reduce privacy risk in everyday operations (non-legal guidance).
+Inputs (paste and fill):
+- Data types handled: [ ]
+- Systems used: [ ]
+- Access model: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Flag items needing legal review
+Output (Markdown):
+- Checklist
+- Common pitfalls
+- Escalation triggers
+Finish with a short QA checklist tailored to this output."
+234,Risk,"Title: Incident severity matrix
+Role: Incident Manager
+Task: Create a severity matrix with clear criteria and required actions per level.
+Inputs (paste and fill):
+- Service context: [ ]
+- Impact dimensions: [ ]
+- Stakeholders: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Severity levels (1–4/5)
+- Criteria table
+- Required actions
+- Comms cadence
+Finish with a short QA checklist tailored to this output."
+235,Risk,"Title: Control design for a high-risk step
+Role: Risk Manager
+Task: Design controls for a specific high-risk step in a process.
+Inputs (paste and fill):
+- Process step: [ ]
+- Failure modes: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Control options
+- Recommended control set
+- Evidence to capture
+- Owner + testing
+Finish with a short QA checklist tailored to this output."
+236,Risk,"Title: Risk review meeting agenda
+Role: Risk Manager
+Task: Create a risk review meeting agenda that leads to decisions and actions.
+Inputs (paste and fill):
+- Risk register link/summary: [ ]
+- Attendees: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Agenda
+- Pre-read checklist
+- Decision questions
+- Actions format
+Finish with a short QA checklist tailored to this output."
+237,Risk,"Title: Compliance gap assessment
+Role: Compliance/Ops
+Task: Assess a process for compliance gaps against a requirement set.
+Inputs (paste and fill):
+- Requirements (paste): [ ]
+- Current process (paste): [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Gap table
+- Impact
+- Remediation plan
+- Owners
+- Timeline
+Finish with a short QA checklist tailored to this output."
+238,Risk,"Title: Single-point-of-failure analysis
+Role: Ops Lead
+Task: Identify single points of failure (people, systems, suppliers) and propose mitigation.
+Inputs (paste and fill):
+- Context: [ ]
+- Key dependencies: [ ]
+- Current backups: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- SPOF list
+- Impact assessment
+- Mitigation options
+- Priority order
+Finish with a short QA checklist tailored to this output."
+239,Risk,"Title: Fraud risk assessment (ops)
+Role: Risk/Finance Ops
+Task: Assess fraud risks in a workflow and propose controls.
+Inputs (paste and fill):
+- Workflow description (paste): [ ]
+- Payment/refund elements: [ ]
+- Known incidents: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Fraud risks
+- Controls
+- Monitoring signals
+- Escalation workflow
+Finish with a short QA checklist tailored to this output."
+240,Risk,"Title: Risk-informed decision memo
+Role: Ops Lead
+Task: Write a decision memo that explicitly weighs risks and mitigations.
+Inputs (paste and fill):
+- Decision: [ ]
+- Options: [ ]
+- Risks per option: [ ]
+- Constraints: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Decision memo
+- Risk comparison table
+- Recommendation
+- Mitigation plan
+Finish with a short QA checklist tailored to this output."
+241,Risk,"Title: Cyber hygiene checklist for small teams
+Role: Security-aware Ops
+Task: Create a cyber hygiene checklist for a small team (practical, non-technical).
+Inputs (paste and fill):
+- Tools used (email, docs, chat): [ ]
+- Device types: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+- Do not recommend insecure practices
+Output (Markdown):
+- Checklist
+- Quick wins
+- Escalation if compromised
+Finish with a short QA checklist tailored to this output."
+242,Risk,"Title: Risk indicator design (KRIs)
+Role: Risk Analyst
+Task: Design KRIs (Key Risk Indicators) linked to top risks with thresholds.
+Inputs (paste and fill):
+- Top risks: [ ]
+- Available data signals: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- KRI list
+- Definitions
+- Thresholds
+- Action when breached
+Finish with a short QA checklist tailored to this output."
+243,Risk,"Title: Regulatory change impact scan
+Role: Compliance
+Task: Create a method to scan regulatory changes and assess impact quickly.
+Inputs (paste and fill):
+- Industry/region: [ ]
+- Key regulations: [ ]
+- Owners: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Scan process
+- Impact assessment template
+- Escalation workflow
+- Cadence
+Finish with a short QA checklist tailored to this output."
+244,Risk,"Title: Operational audit readiness checklist
+Role: Ops Excellence
+Task: Create an audit readiness checklist to ensure evidence and controls are in place.
+Inputs (paste and fill):
+- Area/process: [ ]
+- Audit type: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Checklist
+- Evidence list
+- Roles
+- Common fail points
+Finish with a short QA checklist tailored to this output."
+245,Risk,"Title: Risk communication to leadership
+Role: Risk Manager
+Task: Draft a leadership update on risks that is clear, prioritised, and action-focused.
+Inputs (paste and fill):
+- Top risks: [ ]
+- Changes since last update: [ ]
+- Asks: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Update memo
+- Top risks table
+- Asks/decisions
+- Next steps
+Finish with a short QA checklist tailored to this output."
+246,Risk,"Title: Incident tabletop exercise plan
+Role: BCP/Incident
+Task: Design a tabletop exercise to practise incident response and comms.
+Inputs (paste and fill):
+- Scenario: [ ]
+- Participants: [ ]
+- Objectives: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Exercise agenda
+- Injects/questions
+- Roles
+- Debrief template
+- Action capture
+Finish with a short QA checklist tailored to this output."
+247,Risk,"Title: Risk-based access review plan
+Role: Security/Governance
+Task: Create a periodic access review plan for systems and data.
+Inputs (paste and fill):
+- Systems: [ ]
+- Roles: [ ]
+- Frequency: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Process
+- Reviewer checklist
+- Evidence
+- Remediation steps
+Finish with a short QA checklist tailored to this output."
+248,Risk,"Title: Risk escalation decision tree
+Role: Risk Manager
+Task: Create a decision tree for when and how to escalate risks.
+Inputs (paste and fill):
+- Risk appetite: [ ]
+- Stakeholders: [ ]
+- Examples of past issues: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Decision tree
+- Escalation levels
+- Information required
+- Templates
+Finish with a short QA checklist tailored to this output."
+249,Risk,"Title: Post-incident action tracking system
+Role: Incident Manager
+Task: Design an action tracking system to ensure post-incident actions get completed.
+Inputs (paste and fill):
+- Tooling: [ ]
+- Owner roles: [ ]
+- Cadence: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Tracker template
+- Operating rules
+- Review cadence
+- Closure criteria
+Finish with a short QA checklist tailored to this output."
+250,Risk,"Title: Change risk assessment checklist
+Role: Change Manager
+Task: Create a checklist to assess risk before making a change (process/system).
+Inputs (paste and fill):
+- Change description: [ ]
+- Affected users: [ ]
+- Rollback options: [ ]
+Constraints:
+- UK English
+- Plain language (no jargon)
+- State assumptions explicitly
+- Use headings and bullet points where helpful
+Output (Markdown):
+- Pre-change checklist
+- Go/No-go criteria
+- Comms checklist
+- Post-change monitoring
+Finish with a short QA checklist tailored to this output."

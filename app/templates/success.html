@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment received</title>
+  <link rel="stylesheet" href="/static/site.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>PromptKitPro</div>
+      </div>
+      <div class="badge">
+        <span class="code">v{{ version or "2.0" }}</span>
+        <span>payment confirmed</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Payment received ✅</h2>
+      <p>
+        You’re all set. Your purchase is confirmed and your library is ready to download.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>Order summary</h2>
+      <ul class="list" style="margin-top:10px;">
+        <li><strong>Product:</strong> Operations &amp; Productivity Prompt Library</li>
+        <li><strong>Includes:</strong> PDF + CSV + JSON (delivered as a ZIP)</li>
+        <li><strong>Purchase type:</strong> One-time payment (no subscription)</li>
+        <li><strong>Delivery:</strong> Instant access via secure link</li>
+      </ul>
+
+      <div class="hr"></div>
+
+      <h2>Next step</h2>
+      <p>
+        Go to your download page. If the download isn’t ready immediately, refresh once —
+        Stripe webhooks can take a few seconds.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="/download?session_id={{ session_id }}">Go to download</a>
+        <a class="btn" href="/">Return to overview</a>
+      </div>
+
+      <div class="hr"></div>
+
+      <p class="small" style="margin:0;">
+        <strong>Security note:</strong> Your download link is tokenised and single-purpose. Don’t share it.<br />
+        Need help? <a href="mailto:support@promptkitpro.com">support@promptkitpro.com</a>
+        · <a href="/static/refunds.html">Refunds</a> · <a href="/static/privacy.html">Privacy</a>
+      </p>
+
+      <div class="hr"></div>
+
+      <p class="small">Session ID</p>
+      <div style="margin-bottom:0;"><span class="code">{{ session_id }}</span></div>
+
+      <div class="footer" style="margin-top:16px;">
+        <div>Thank you — built for people who use AI for real work.</div>
+        <div><span class="code">v{{ version or "2.0" }}</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

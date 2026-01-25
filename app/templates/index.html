@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PromptKitPro</title>
+  <link rel="stylesheet" href="/static/site.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>PromptKitPro</div>
+      </div>
+      <div class="badge">
+        <span class="code">v{{ version or "2.0" }}</span>
+        <span>instant access after payment</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- LEFT: MESSAGE -->
+      <div class="hero">
+        <div class="badge" style="margin-bottom:12px;">
+          <span>For professionals who already use AI daily</span>
+          <span class="code">PDF + CSV + JSON</span>
+        </div>
+
+        <h1>Reliable AI outputs, without re-writing prompts every day.</h1>
+
+        <p style="font-size:18px;">
+          A curated library of <strong>250 professionally-structured prompts</strong> for real work:
+          research, planning, analysis, writing, and operations.
+        </p>
+
+        <div class="kpis" aria-label="Key facts">
+          <div class="kpi">250 prompts</div>
+          <div class="kpi">One-time purchase</div>
+          <div class="kpi">Instant download</div>
+          <div class="kpi">Model-agnostic wording</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>What you get</h2>
+        <ul class="list">
+          <li><strong>PDF</strong> for fast browsing + reference</li>
+          <li><strong>CSV</strong> so you can edit, tag, and build your own variants</li>
+          <li><strong>JSON</strong> for automation and tooling</li>
+          <li><strong>Clear structures</strong> that encourage reasoning (not guessing)</li>
+          <li><strong>Reusable formats</strong> designed for iteration and workflows</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>Proof: how the prompts are written</h2>
+        <p>
+          Most libraries are vague, bloated, or “clever”. This one is designed to be
+          <strong>repeatable</strong> — so you can paste, run, and get consistent structure back.
+        </p>
+
+        <!-- SAMPLE PROMPT EXCERPT -->
+        <div class="card" style="margin-top:12px;">
+          <h2 style="margin-bottom:10px;">Sample prompt excerpt</h2>
+
+          <p class="small" style="margin-bottom:10px;">
+            This is representative of the structure used throughout the library:
+            explicit role, inputs, constraints, and output format.
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div>
+              <div class="small" style="margin-bottom:6px;"><strong>Role &amp; task</strong></div>
+              <div class="code" style="display:block; border-radius:12px; padding:12px;">
+                Role: Ops Manager<br />
+                Task: Write a post-meeting decision memo that documents what was decided and why,
+                to prevent re-litigating later.
+              </div>
+            </div>
+
+            <div>
+              <div class="small" style="margin-bottom:6px;"><strong>Inputs</strong></div>
+              <div class="code" style="display:block; border-radius:12px; padding:12px;">
+                Decision(s) made: [ ]<br />
+                Rationale: [ ]<br />
+                Alternatives considered: [ ]<br />
+                Owners / dates: [ ]<br />
+                Stakeholders to inform: [ ]
+              </div>
+            </div>
+
+            <div>
+              <div class="small" style="margin-bottom:6px;"><strong>Constraints</strong></div>
+              <div class="code" style="display:block; border-radius:12px; padding:12px;">
+                UK English<br />
+                Plain language (no jargon)<br />
+                State assumptions explicitly<br />
+                Use headings and bullet points where helpful
+              </div>
+            </div>
+
+            <div>
+              <div class="small" style="margin-bottom:6px;"><strong>Output (Markdown)</strong></div>
+              <div class="code" style="display:block; border-radius:12px; padding:12px;">
+                Decision memo<br />
+                Actions + owners + dates<br />
+                Comms list + message snippets<br /><br />
+                Finish with a short QA checklist tailored to this output
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:12px;">
+          All 250 prompts follow this structure, tailored to different professional tasks.
+        </p>
+
+        <div class="hr"></div>
+
+        <h2>Who it’s for</h2>
+        <ul class="list">
+          <li>You already use ChatGPT professionally and want <strong>better defaults</strong></li>
+          <li>You care about <strong>quality, consistency, and speed</strong></li>
+          <li>You’re tired of re-prompting and debugging vague outputs</li>
+        </ul>
+
+        <h2>What it’s not</h2>
+        <ul class="list">
+          <li>Not “prompt hacks” or gimmicks</li>
+          <li>Not a bloated PDF dump</li>
+          <li>Not a subscription</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>Why it pays for itself</h2>
+        <p>
+          If this saves you even <strong>one hour</strong> of re-prompting, rewriting instructions,
+          or cleaning messy output, it’s already paid for itself.
+        </p>
+
+        <p style="margin-top:14px;">
+          <strong>Stop improvising.<br />
+          Start prompting with intent.</strong>
+        </p>
+      </div>
+
+      <!-- RIGHT: PURCHASE (STICKY) -->
+      <div class="card sticky">
+        <h2>Operations & Productivity Prompt Library</h2>
+        <p>
+          250 reusable prompts designed for professional workflows — delivered instantly after purchase.
+        </p>
+
+        <div class="hr"></div>
+
+        <ul class="list" style="margin-top:0;">
+          <li><strong>One-time purchase:</strong> £25</li>
+          <li><strong>Instant download</strong> after Stripe payment</li>
+          <li><strong>Includes:</strong> PDF, CSV, JSON, ZIP</li>
+          <li><strong>Works across models</strong> (model-agnostic wording)</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <form method="post" action="/buy">
+          <label for="email">Email (used only to deliver your download link)</label>
+          <input
+            id="email"
+            class="input"
+            type="email"
+            name="email"
+            required
+            placeholder="you@company.com"
+            autocomplete="email"
+          />
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">
+              Get instant access — £25
+            </button>
+          </div>
+
+          <p class="small" style="margin-top:12px;">
+            Secure checkout via <strong>Stripe</strong>. Card details never touch our server.
+          </p>
+
+          <div class="hr"></div>
+
+          <p class="small" style="margin:0;">
+            Questions or issues? <a href="mailto:support@promptkitpro.com">support@promptkitpro.com</a><br />
+            <a href="/static/privacy.html">Privacy</a>
+          </p>
+        </form>
+
+        <div class="footer">
+          <div>© PromptKitPro</div>
+          <div><span class="code">v{{ version or "2.0" }}</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
