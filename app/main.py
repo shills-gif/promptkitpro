@@ -62,7 +62,7 @@ APP_NAME = "PromptKitPro"
 APP_VERSION = "2.0"
 
 PRODUCT_NAME = "Operations & Productivity Prompt Library"
-PRODUCT_PRICE_GBP = "£25"
+PRODUCT_PRICE_GBP = "£19.99"
 PRODUCT_PROMPT_COUNT = 250
 
 # --- PDF theme (mirrors site.css) ---
