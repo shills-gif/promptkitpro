@@ -60,56 +60,15 @@
           <strong>repeatable</strong> — so you can paste, run, and get consistent structure back.
         </p>
 
-        <!-- SAMPLE PROMPT EXCERPT -->
+        <!-- SAMPLE PROMPT EXCERPT (from CSV) -->
         <div class="card" style="margin-top:12px;">
           <h2 style="margin-bottom:10px;">Sample prompt excerpt</h2>
 
-          <p class="small" style="margin-bottom:10px;">
-            This is representative of the structure used throughout the library:
-            explicit role, inputs, constraints, and output format.
-          </p>
-
-          <div style="display:flex; flex-direction:column; gap:12px;">
-            <div>
-              <div class="small" style="margin-bottom:6px;"><strong>Role &amp; task</strong></div>
-              <div class="code" style="display:block; border-radius:12px; padding:12px;">
-                Role: Ops Manager<br />
-                Task: Write a post-meeting decision memo that documents what was decided and why,
-                to prevent re-litigating later.
-              </div>
-            </div>
-
-            <div>
-              <div class="small" style="margin-bottom:6px;"><strong>Inputs</strong></div>
-              <div class="code" style="display:block; border-radius:12px; padding:12px;">
-                Decision(s) made: [ ]<br />
-                Rationale: [ ]<br />
-                Alternatives considered: [ ]<br />
-                Owners / dates: [ ]<br />
-                Stakeholders to inform: [ ]
-              </div>
-            </div>
-
-            <div>
-              <div class="small" style="margin-bottom:6px;"><strong>Constraints</strong></div>
-              <div class="code" style="display:block; border-radius:12px; padding:12px;">
-                UK English<br />
-                Plain language (no jargon)<br />
-                State assumptions explicitly<br />
-                Use headings and bullet points where helpful
-              </div>
-            </div>
-
-            <div>
-              <div class="small" style="margin-bottom:6px;"><strong>Output (Markdown)</strong></div>
-              <div class="code" style="display:block; border-radius:12px; padding:12px;">
-                Decision memo<br />
-                Actions + owners + dates<br />
-                Comms list + message snippets<br /><br />
-                Finish with a short QA checklist tailored to this output
-              </div>
-            </div>
+          <div class="small" style="margin-bottom:8px;">
+            <strong>Prompt {{ preview_prompt.id }} — {{ preview_prompt.category }}</strong>
           </div>
+
+          <div class="code" style="display:block; border-radius:12px; padding:12px; white-space:pre-wrap;">{{ preview_excerpt | trim }}</div>
         </div>
 
         <p class="small" style="margin-top:12px;">

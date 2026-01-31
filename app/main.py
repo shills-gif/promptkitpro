@@ -22,6 +22,7 @@ import stripe
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import mm
+from reportlab.lib import colors
 
 # Load environment variables from .env
 load_dotenv()
@@ -64,6 +65,16 @@ PRODUCT_NAME = "Operations & Productivity Prompt Library"
 PRODUCT_PRICE_GBP = "£25"
 PRODUCT_PROMPT_COUNT = 250
 
+# --- PDF theme (mirrors site.css) ---
+PDF_BG = colors.HexColor("#0b0f19")
+PDF_TEXT = colors.whitesmoke
+PDF_MUTED = colors.Color(1, 1, 1, alpha=0.7)
+
+PDF_ACCENT = colors.HexColor("#7c3aed")
+PDF_ACCENT_2 = colors.HexColor("#22c55e")
+
+PDF_DIVIDER = colors.Color(1, 1, 1, alpha=0.15)
+
 app = FastAPI(title=APP_NAME)
 templates = Jinja2Templates(directory="app/templates")
 
@@ -73,7 +84,7 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 DB_PATH = "app/orders.sqlite3"
 
 # Source-of-truth prompt library file
-PROMPTS_CSV_PATH = "app/data/prompt_library_v2_250.csv"
+PROMPTS_CSV_PATH = "app/data/prompt_library_v3_250.csv"
 
 
 def db() -> sqlite3.Connection:
@@ -177,6 +188,97 @@ def _draw_wrapped_text(
     return y
 
 
+def draw_page_background(c: canvas.Canvas):
+    page_w, page_h = A4
+    c.setFillColor(PDF_BG)
+    c.rect(0, 0, page_w, page_h, stroke=0, fill=1)
+
+
+def _fit_title_lines(
+    c: canvas.Canvas,
+    title: str,
+    max_width: float,
+    font_name: str = "Helvetica-Bold",
+    start_size: int = 20,
+    min_size: int = 12,
+    max_lines: int = 3,
+) -> tuple[list[str], int]:
+    """
+    Fit a title into max_width by wrapping at natural breakpoints and/or shrinking font.
+    Returns (lines, font_size).
+    """
+    # Prefer breaking at these separators (in order)
+    separators = [" — ", " - ", " | ", ": "]
+
+    def try_split(t: str) -> list[str]:
+        for sep in separators:
+            if sep in t:
+                parts = t.split(sep)
+                # Rebuild lines while preserving separator meaning
+                lines = [parts[0]]
+                for p in parts[1:]:
+                    # Add separator back to previous line if it fits better as a continuation
+                    lines.append(p)
+                # Put the separator back visually between first two chunks if we used it
+                if len(lines) >= 2 and sep.strip():
+                    lines[0] = lines[0] + sep.strip()
+                return [ln.strip() for ln in lines if ln.strip()]
+        return [t.strip()]
+
+    # First attempt: split by separators
+    base_lines = try_split(title)
+
+    # If still too long, do word-wrapping
+    def word_wrap(t: str) -> list[str]:
+        words = t.split()
+        lines: list[str] = []
+        cur = ""
+        for w in words:
+            cand = (cur + " " + w).strip()
+            if c.stringWidth(cand, font_name, start_size) <= max_width:
+                cur = cand
+            else:
+                if cur:
+                    lines.append(cur)
+                cur = w
+        if cur:
+            lines.append(cur)
+        return lines
+
+    # Try decreasing font size until it fits within width and line count
+    for size in range(start_size, min_size - 1, -1):
+        c.setFont(font_name, size)
+
+        # Start from separator split, then wrap each piece if needed
+        lines: list[str] = []
+        for chunk in base_lines:
+            if c.stringWidth(chunk, font_name, size) <= max_width:
+                lines.append(chunk)
+            else:
+                # wrap chunk by words at this font size
+                words = chunk.split()
+                cur = ""
+                for w in words:
+                    cand = (cur + " " + w).strip()
+                    if c.stringWidth(cand, font_name, size) <= max_width:
+                        cur = cand
+                    else:
+                        if cur:
+                            lines.append(cur)
+                        cur = w
+                if cur:
+                    lines.append(cur)
+
+        if len(lines) <= max_lines and all(c.stringWidth(ln, font_name, size) <= max_width for ln in lines):
+            return lines, size
+
+    # Fall back: hard truncate (should rarely happen)
+    c.setFont(font_name, min_size)
+    t = title
+    while c.stringWidth(t + "…", font_name, min_size) > max_width and len(t) > 10:
+        t = t[:-1]
+    return [t + "…"], min_size
+
 def _render_prompts_into_canvas(
     c: canvas.Canvas,
     prompts: List[Dict[str, str]],
@@ -195,22 +297,43 @@ def _render_prompts_into_canvas(
     line_height = 4.5 * mm
 
     c.setTitle(title)
+    draw_page_background(c)
 
     # Track prompt start pages
     prompt_start_page: Dict[str, int] = {}
 
     def new_page():
         c.showPage()
-        # After showPage(), ReportLab starts a new page; pageNumber increments
-        return
+        draw_page_background(c)
 
     if include_title_and_contents:
         # --- Title page ---
         y = page_h - margin
-        c.setFont("Helvetica-Bold", 18)
-        c.drawString(x, y, title)
-        y -= 10 * mm
+        
+        c.setFillColor(PDF_TEXT)
 
+        
+        title_lines, title_size = _fit_title_lines(
+            c=c,
+            title=title,
+            max_width=max_width,
+            font_name="Helvetica-Bold",
+            start_size=20,
+            min_size=12,
+            max_lines=3,
+        )
+        
+        c.setFont("Helvetica-Bold", title_size)
+        for line in title_lines:
+            c.drawString(x, y, line)
+            y -= (title_size * 0.9) * mm  # line spacing tied to font size
+
+        # Accent bar (brand)
+        c.setFillColor(PDF_ACCENT)
+        c.rect(x, y - 4 * mm, 40 * mm, 2 * mm, stroke=0, fill=1)
+        y -= 12 * mm
+
+        c.setFillColor(PDF_MUTED)
         c.setFont("Helvetica", 11)
         c.drawString(x, y, f"Total prompts: {len(prompts)}")
         y -= 6 * mm
@@ -222,10 +345,12 @@ def _render_prompts_into_canvas(
 
         # --- Contents page (Category ranges) ---
         y = page_h - margin
+        c.setFillColor(PDF_TEXT)
         c.setFont("Helvetica-Bold", 16)
         c.drawString(x, y, "Contents")
         y -= 10 * mm
 
+        c.setFillColor(PDF_MUTED)
         c.setFont("Helvetica", 10)
         c.drawString(x, y, "Categories (page ranges show where each category begins and ends).")
         y -= 8 * mm
@@ -237,14 +362,17 @@ def _render_prompts_into_canvas(
         items = sorted(category_ranges.items(), key=lambda kv: (kv[1][0], kv[0].lower()))
 
         # Draw entries
+        c.setFillColor(PDF_TEXT)
         c.setFont("Helvetica", 10)
         for cat, (start_p, end_p) in items:
             if y < margin + 20 * mm:
                 new_page()
                 y = page_h - margin
+                c.setFillColor(PDF_TEXT)
                 c.setFont("Helvetica-Bold", 16)
                 c.drawString(x, y, "Contents (cont.)")
                 y -= 10 * mm
+                c.setFillColor(PDF_TEXT)
                 c.setFont("Helvetica", 10)
 
             # Left: category
@@ -252,7 +380,6 @@ def _render_prompts_into_canvas(
 
             # Right: page range, aligned to the right margin
             range_text = f"{start_p}–{end_p}" if start_p != end_p else f"{start_p}"
-            # drawRightString uses x coordinate as right edge
             c.drawRightString(page_w - margin, y, range_text)
 
             y -= 6 * mm
@@ -261,6 +388,8 @@ def _render_prompts_into_canvas(
 
     # --- Prompts section ---
     y = page_h - margin
+    c.setFillColor(PDF_TEXT)
+    c.setFont("Helvetica", 9)
 
     for p in prompts:
         # Record the page where this prompt starts
@@ -270,15 +399,19 @@ def _render_prompts_into_canvas(
         if y < margin + 40 * mm:
             new_page()
             y = page_h - margin
+            c.setFillColor(PDF_TEXT)
+            c.setFont("Helvetica", 9)
 
         pid = p.get("id", "").strip()
         cat = p.get("category", "").strip()
         body = p.get("prompt", "").strip()
 
+        c.setFillColor(PDF_ACCENT_2)
         c.setFont("Helvetica-Bold", 11)
         c.drawString(x, y, f"{pid} — {cat}")
         y -= 6 * mm
 
+        c.setFillColor(PDF_TEXT)
         c.setFont("Helvetica", 9)
 
         for para in body.splitlines():
@@ -291,7 +424,13 @@ def _render_prompts_into_canvas(
             if y < margin + 20 * mm:
                 new_page()
                 y = page_h - margin
+                c.setFillColor(PDF_TEXT)
                 c.setFont("Helvetica", 9)
+
+        # Subtle divider between prompts (optional but tasteful)
+        c.setStrokeColor(PDF_DIVIDER)
+        c.line(x, y, x + max_width, y)
+        y -= 6 * mm
 
         y -= 6 * mm
 
@@ -430,6 +569,30 @@ def build_library_zip(cfg: LibraryConfig) -> bytes:
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
+    # --- Landing-page preview prompt (deterministic: prompt id "1") ---
+    preview_prompt = {"id": "1", "category": "Meetings", "prompt": ""}
+    preview_excerpt = ""
+
+    try:
+        prompts = load_prompt_library()
+        found = None
+        for p in prompts:
+            if str(p.get("id", "")).strip() == "1":
+                found = p
+                break
+
+        if found is None and prompts:
+            found = prompts[0]
+
+        if found:
+            preview_prompt = found
+            prompt_text = (found.get("prompt") or "").strip()
+            preview_excerpt = prompt_text
+    except Exception:
+        # Intentionally do not fail the landing page if preview loading fails.
+        # The rest of the system (fulfilment) will still fail loudly if the CSV is missing.
+        preview_excerpt = ""
+
     return templates.TemplateResponse(
         "index.html",
         {
@@ -439,6 +602,8 @@ def home(request: Request):
             "product_name": PRODUCT_NAME,
             "price": PRODUCT_PRICE_GBP,
             "count": PRODUCT_PROMPT_COUNT,
+            "preview_prompt": preview_prompt,
+            "preview_excerpt": preview_excerpt,
         },
     )
 
